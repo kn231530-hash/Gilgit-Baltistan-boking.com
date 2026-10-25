@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#faf8ff", "on-primary-fixed-variant": "#00513b", "on-surface-variant": "#3f4944", "surface-container-lowest": "#ffffff", "primary-fixed": "#a6f2d1", "surface": "#faf8ff", "surface-container-high": "#e2e7ff", "on-primary": "#ffffff", "secondary": "#904d00", "on-tertiary-fixed-variant": "#004b73", "tertiary-fixed-dim": "#93ccff", "primary": "#004532", "inverse-on-surface": "#eef0ff", "secondary-fixed-dim": "#ffb77d", "surface-variant": "#dae2fd", "tertiary": "#004063", "on-primary-fixed": "#002116", "on-secondary-fixed-variant": "#6e3900", "surface-container-low": "#f2f3ff", "error-container": "#ffdad6", "on-background": "#131b2e", "surface-container-highest": "#dae2fd", "inverse-primary": "#8bd6b6", "error": "#ba1a1a", "primary-container": "#065f46", "outline": "#6f7973", "tertiary-container": "#005887", "secondary-container": "#fe932c", "tertiary-fixed": "#cce5ff", "on-secondary-fixed": "#2f1500", "on-tertiary-fixed": "#001d31", "on-tertiary-container": "#95cdff", "on-secondary": "#ffffff", "outline-variant": "#bec9c2", "on-error-container": "#93000a", "on-surface": "#131b2e", "surface-dim": "#d2d9f4", "on-error": "#ffffff", "background": "#faf8ff", "surface-tint": "#1b6b51", "inverse-surface": "#283044", "primary-fixed-dim": "#8bd6b6", "on-secondary-container": "#663500", "on-tertiary": "#ffffff", "on-primary-container": "#8bd6b7", "surface-container": "#eaedff", "secondary-fixed": "#ffdcc3" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1rem", "gutter-desktop": "1.5rem", "space-2xs": "0.125rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-xl": "2rem", "space-md": "1rem", "margin-desktop": "2rem", "space-2xl": "3rem", "space-lg": "1.5rem", "gutter": "1rem" }, "fontFamily": { "headline-lg": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"], "label-lg": ["Plus Jakarta Sans"], "currency-pkr": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "body-sm": ["Inter"], "label-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"] }, "fontSize": { "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "700" }], "currency-pkr": ["16px", { "lineHeight": "20px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "700" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="GB One Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WDHrQC9Y1-4UeZ_lqj8t17--erpPR6yG2G0CD5zRb79Lk6CgwvESznZ5PTlIlcxXSU50nImnkyCdJp7fxkh05otAZEfcQav4JaNT2R4RLKtGIVF6v8fW8EYKuX38_e6pvqBn6MkBQwNflTyjsv6Te9FJ6jsrEQioCGtK-NgQyCTmxeD90VWzwW6IZ8nl3EMa9MpjrkUsqt4hVE3NjmQtos1iHvMudjDLS2sNQ0k5x6BV9p6jiP9QB_2g"/><span class="font-headline-sm text-headline-sm text-primary hidden sm:inline">GB One</span></div><div class="flex flex-col items-center justify-center"><div class="flex items-center gap-space-2xs bg-surface-container-low px-space-sm py-space-2xs rounded-full"><span class="material-symbols-outlined text-primary text-[14px]">location_on</span><span class="font-label-sm text-label-sm text-on-surface">Hunza &amp; Gilgit</span><span class="material-symbols-outlined text-outline text-[12px]">expand_more</span></div><span class="font-label-sm text-label-sm text-outline mt-0.5">Travel</span></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">notifications</span></button><div class="w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHZlfIfvo_ZKfpUDNHVIGTwJ7cOmrdRBnawDjmHO5Ta8pd2GllPDG1tJtbQKkGPFLkiKLD0P1jeIUm_6a8UBgJE540_DEUatYpdqD-MU9TYyZg1THVHkyNLpOuJOywdVXD9LPhPezJBp7nV0k_6hJ9iGih4ym3GQqoTBGqtvgoGkFQPbYj3AjNgelZOPUCVkK6zb43d_xG92MYxoVnhmmiNlwpnikrIBO1HqYz97tZGhOzjT94HEKP"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full pb-10">
+<!-- Alpine Ambient Live Status Banner -->
+<div class="px-margin pt-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="relative flex h-2.5 w-2.5 shrink-0">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+</span>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm text-primary uppercase tracking-wider truncate">Karakoram Transit Clear</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Babusar Top: +11°C • KKH Smooth Flow</p>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-lowest px-space-xs py-1 rounded-full shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[14px] text-secondary">wb_sunny</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Dry Roads</span>
+</div>
+</div>
+</div>
+<!-- SECTION 1: Route & Booking Selector Box -->
+<section class="px-margin mt-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-space-md">
+<!-- Segmented Service Toggle -->
+<div class="grid grid-cols-3 gap-1 bg-surface-container-low p-1 rounded-lg">
+<button class="py-2 rounded-md font-label-md text-label-md text-center transition-all bg-primary text-on-primary shadow-sm flex items-center justify-center gap-1" id="tab-scheduled" onclick="switchMainTab('scheduled')">
+<span class="material-symbols-outlined text-[16px]">directions_bus</span>
+<span>Inter-City</span>
+</button>
+<button class="py-2 rounded-md font-label-md text-label-md text-center text-on-surface-variant transition-all hover:text-primary flex items-center justify-center gap-1" id="tab-jeeps" onclick="switchMainTab('jeeps')">
+<span class="material-symbols-outlined text-[16px]">minor_crash</span>
+<span>4x4 Jeeps</span>
+</button>
+<button class="py-2 rounded-md font-label-md text-label-md text-center text-on-surface-variant transition-all hover:text-primary flex items-center justify-center gap-1" id="tab-airport" onclick="switchMainTab('airport')">
+<span class="material-symbols-outlined text-[16px]">flight_land</span>
+<span>Airport VIP</span>
+</button>
+</div>
+<!-- Departure & Arrival Pickers -->
+<div class="flex flex-col gap-space-xs relative">
+<!-- Pick-up -->
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[18px]">trip_origin</span>
+</div>
+<div class="flex-1 min-w-0">
+<label class="block font-label-sm text-label-sm text-outline uppercase tracking-wider">Pick-Up Location</label>
+<input class="w-full bg-transparent font-headline-sm text-headline-sm text-on-surface outline-none truncate font-semibold" type="text" value="Islamabad / Rawalpindi (I-8 Terminal)"/>
+</div>
+<button class="text-outline hover:text-primary" title="Locate me">
+<span class="material-symbols-outlined text-[20px]">my_location</span>
+</button>
+</div>
+<!-- Swap Pin Button -->
+<div class="absolute right-6 top-[42px] z-10">
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest shadow-md flex items-center justify-center text-primary hover:scale-105 active:scale-95 transition-transform" onclick="swapDestinations()">
+<span class="material-symbols-outlined text-[18px]">swap_vert</span>
+</button>
+</div>
+<!-- Drop-off -->
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[18px]">location_on</span>
+</div>
+<div class="flex-1 min-w-0">
+<label class="block font-label-sm text-label-sm text-outline uppercase tracking-wider">Destination</label>
+<input class="w-full bg-transparent font-headline-sm text-headline-sm text-on-surface outline-none truncate font-semibold" id="dest-input" type="text" value="Hunza (Karimabad) &amp; Skardu"/>
+</div>
+<button class="text-outline hover:text-primary">
+<span class="material-symbols-outlined text-[20px]">expand_circle_down</span>
+</button>
+</div>
+</div>
+<!-- Departure Date & Passengers Dual Selectors -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-sm rounded-lg">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_today</span>
+<div class="min-w-0 flex-1">
+<p class="font-label-sm text-label-sm text-outline uppercase">Departure</p>
+<p class="font-label-lg text-label-lg text-on-surface truncate">Tomorrow, 14 Oct</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-sm rounded-lg">
+<span class="material-symbols-outlined text-primary text-[20px]">group</span>
+<div class="min-w-0 flex-1">
+<p class="font-label-sm text-label-sm text-outline uppercase">Travelers</p>
+<p class="font-label-lg text-label-lg text-on-surface truncate">2 Adults • 1 Bag</p>
+</div>
+</div>
+</div>
+<!-- CTA Find Routes -->
+<button class="w-full py-3.5 bg-primary hover:bg-primary-container text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-space-xs shadow-md transition-all active:scale-[0.98]" onclick="triggerSearchAnimation()">
+<span class="material-symbols-outlined text-[20px]">search</span>
+<span>Search Alpine Departures</span>
+</button>
+</div>
+</section>
+<!-- High-Key Quick Filters Ribbon -->
+<div class="mt-space-md pl-margin overflow-x-auto flex items-center gap-space-xs no-scrollbar pr-margin">
+<button class="shrink-0 px-space-md py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">stars</span>
+<span>All Verified</span>
+</button>
+<button class="shrink-0 px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm flex items-center gap-1 shadow-sm hover:bg-surface-container-low">
+<span class="material-symbols-outlined text-[16px] text-primary">ac_unit</span>
+<span>Executive AC</span>
+</button>
+<button class="shrink-0 px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm flex items-center gap-1 shadow-sm hover:bg-surface-container-low">
+<span class="material-symbols-outlined text-[16px] text-secondary">terrain</span>
+<span>4x4 Off-Road</span>
+</button>
+<button class="shrink-0 px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm flex items-center gap-1 shadow-sm hover:bg-surface-container-low">
+<span class="material-symbols-outlined text-[16px] text-primary">shield_person</span>
+<span>Local Driver</span>
+</button>
+</div>
+<!-- SECTION 2: Scheduled Transport (Buses & Coasters) -->
+<section class="mt-space-lg px-margin flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Scheduled Mountain Coasters</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Daily regulated inter-district &amp; express coach lines</p>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold bg-primary-fixed px-2 py-1 rounded-full">NATCO Sync</span>
+</div>
+<!-- Bus Card 1: NATCO Luxury Coaster -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+<div class="relative w-full h-40">
+<img class="w-full h-full object-cover" data-alt="A modern turquoise and white luxury executive passenger coaster cruising on the smooth scenic Karakoram Highway surrounded by dramatic soaring pine-covered mountain peaks under crisp morning alpine sunshine." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAteTjKN9T3RmxrTE2rNbnRRFEOAWi39oJieSls6FWfDldCwK0bpotiCjf6h4yjhoifdlxPth-tcNkd6rhW7IBHCYWyrhvLC7_U2wdyoU_7lyJlDiUrYO_fx4XKqRRRVrRts5uoEPuW_h8TyEBvZjZ9y_rUww32zx3lC1Eb3KQbJTXlY37_jxwn1kUnRRPvyZGrxgPREUMeTBIm9IguwpKuxlMIVfXdkHf3jCD1joQwa-8GdYLZgOkP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 bg-surface-container-lowest/95 backdrop-blur-md px-2.5 py-1 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-primary text-[14px]">verified</span>
+<span class="font-label-sm text-label-sm text-primary">NATCO &amp; Faisal Executive</span>
+</div>
+<div class="absolute top-3 right-3 bg-secondary-container text-on-secondary-container px-2.5 py-1 rounded-full font-label-sm text-label-sm shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">airline_seat_recline_normal</span>
+<span>12 seats left</span>
+</div>
+<div class="absolute bottom-2.5 left-3 right-3 flex items-end justify-between text-on-primary">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-white drop-shadow">Islamabad to Gilgit Central</h3>
+<p class="font-body-sm text-body-sm text-slate-200">Via KKH Babusar Pass • 14h 30m</p>
+</div>
+<div class="text-right">
+<p class="font-currency-pkr text-currency-pkr text-secondary-fixed font-black">PKR 4,500</p>
+<p class="font-label-sm text-label-sm text-slate-300">per seat</p>
+</div>
+</div>
+</div>
+<!-- Specs & Amenities Ribbon -->
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center gap-y-2 gap-x-4 py-1 text-on-surface-variant font-body-sm text-body-sm bg-surface-container-low px-space-sm rounded-lg">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">schedule</span> Dep: 07:00 PM</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">wifi</span> Starlink Wi-Fi</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">power</span> 220V Outlets</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">airline_seat_recline_extra</span> Recliner</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">stars</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">4.8</span>
+<span class="font-body-sm text-body-sm text-outline">(342 trips rated)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-primary" onclick="shareRoute('Islamabad to Gilgit Express')">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+<button class="px-space-md py-2 bg-primary hover:bg-primary-container text-on-primary rounded-lg font-label-md text-label-md font-bold shadow-sm transition-transform active:scale-95" onclick="openSeatModal('NATCO Executive Coaster', 'PKR 4,500')">
+              Reserve Seat
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bus Card 2: Silk Route Hiace Express -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[28px]">airport_shuttle</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Silk Route Hiace Express</h3>
+<span class="bg-primary-fixed text-primary px-1.5 py-0.5 rounded font-label-sm text-label-sm">High Freq</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Gilgit Bus Stand ➔ Hunza Karimabad</p>
+</div>
+</div>
+<div class="text-right shrink-0">
+<p class="font-currency-pkr text-currency-pkr text-primary font-bold">PKR 800</p>
+<p class="font-label-sm text-label-sm text-outline">seat / one-way</p>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm pt-2 bg-surface-container-low/60 px-3 py-2 rounded-lg">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">update</span> Departures Hourly</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">timelapse</span> 2h 15m duration</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">luggage</span> 1 Bag incl.</span>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-1">
+<button class="w-full py-2 bg-surface-container text-primary font-label-md text-label-md rounded-lg font-bold hover:bg-primary hover:text-on-primary transition-colors text-center" onclick="openSeatModal('Silk Route Hiace', 'PKR 800')">
+          Instant Boarding Ticket
+        </button>
+</div>
+</div>
+</section>
+<!-- SECTION 3 & 4: 4x4 Off-Road Jeeps & Mountain SUVs -->
+<section class="mt-space-lg px-margin flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">4x4 Mountain Fleet</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rugged vehicles equipped for high-altitude passes</p>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-bold flex items-center">
+        Filters <span class="material-symbols-outlined text-[14px]">tune</span>
+</button>
+</div>
+<!-- JEEP CARD 1: Prado TZ Skardu & Deosai -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+<div class="relative w-full h-48">
+<img class="w-full h-full object-cover" data-alt="A rugged metallic silver Toyota Land Cruiser Prado 4x4 outfitted with high-clearance off-road tires and an alpine roof luggage rack parked on an expansive high-altitude plateau in Deosai National Park with snowy mountain peaks in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM1FsOldIvi1qmKLVlDTgH-YFlxWna9WMf2QtbMqSV68bYPS1itVLWeYTu7uR8c7oZoCCYU7KV0wvnIjatwXQYdoRCsTv4W1xbj1fN9WXbUzHvqms_nlVat1kE0D5kV1aSQRjQegepvT9G2w_OKl7qn4CnYE2Ez54Pr8cJocqP50go7QCMTb9uYJailUkt4ioWfP_bqdJg4U8glm980aSyPoVHjtpsQYdGiZ6dJj4IycPcHEOlvW2p"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30"></div>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/95 backdrop-blur px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[14px]">verified</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">GB Tourism Registered</span>
+</div>
+<div class="absolute top-3 right-3 bg-surface-container-lowest/90 rounded-full w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-end justify-between">
+<span class="bg-secondary text-on-secondary px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold">
+            Deosai &amp; Shigar Certified
+          </span>
+<div class="flex items-center gap-1 bg-surface-container-lowest/90 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-secondary text-[14px]">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">4.9</span>
+<span class="font-label-sm text-label-sm text-outline">(84)</span>
+</div>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Toyota Land Cruiser Prado TZ</h3>
+<p class="font-body-sm text-body-sm text-outline">Skardu • Deosai Plains • Khaplu Valley</p>
+</div>
+<div class="text-right">
+<p class="font-currency-pkr text-currency-pkr text-primary font-black">PKR 18,500</p>
+<p class="font-label-sm text-label-sm text-outline">/ day + Driver</p>
+</div>
+</div>
+<!-- Spec Badges Grid -->
+<div class="grid grid-cols-4 gap-1.5 py-2">
+<div class="bg-surface-container-low p-2 rounded-lg flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-primary text-[18px]">airline_seat_recline_normal</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">5 Seats</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded-lg flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-primary text-[18px]">luggage</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">4 Large</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded-lg flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-primary text-[18px]">ac_unit</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Dual AC</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded-lg flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-primary text-[18px]">roofing</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Roof Rack</span>
+</div>
+</div>
+<!-- Driver Profile & Transparent Fuel Policy -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<img class="w-10 h-10 rounded-full object-cover shrink-0" data-alt="Headshot of a friendly professional mountain jeep driver from Gilgit Baltistan wearing traditional woolen pakol cap and warm fleece smiling with snowy alpine peaks in the distance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkkLjaZAH8Taf1DbrjSxOvQidA8MPwinaKcnsXcB0FhhoLvrs67z9npfpsw-05Bqno2R-0L9Impknek0OUA3QgCWG9szY6CQZXGAU1HtoynHMgmBhLKv6fPzZ3OM-tAjVJu2eqHiCkcrQmFIiEAZW-rlBckiwKlCHVow-mHKe8JnWQwdymcHZUH-WlVdvtl1bleQS_ttWDO8K5MNh3r01fM9qZCSkJSwgzIDXRpsqYId0bhIMXz9o5"/>
+<div class="min-w-0">
+<div class="flex items-center gap-1">
+<p class="font-label-md text-label-md text-on-surface font-bold truncate">Ustad Karim Skardu</p>
+<span class="material-symbols-outlined text-primary text-[15px]" title="GB Verified Veteran">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">14 Yrs Snow &amp; River Crossings</p>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="inline-block bg-primary-fixed text-primary px-2 py-0.5 rounded text-[11px] font-bold">Fuel as Used</span>
+<p class="font-label-sm text-label-sm text-outline mt-0.5">Start full / return full</p>
+</div>
+</div>
+<!-- Action Row (Book Now + WhatsApp Inquiry) -->
+<div class="flex items-center gap-space-xs pt-1">
+<button class="flex-[65] py-3 bg-primary hover:bg-primary-container text-on-primary rounded-xl font-label-lg text-label-lg font-bold flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-transform" onclick="openBookingDrawer('Toyota Land Cruiser Prado TZ', 'PKR 18,500', 'Ustad Karim Skardu')">
+<span>Request Booking</span>
+</button>
+<a class="flex-[35] py-3 bg-surface-container-lowest text-[#128C7E] rounded-xl font-label-lg text-label-lg font-bold flex items-center justify-center gap-1 shadow-sm hover:bg-surface-container-low transition-colors" href="https://wa.me/923000000000?text=Hi%20Ustad%20Karim,%20I%20am%20inquiring%20about%20Prado%20TZ%20Skardu%20rental%20on%20GB%20One" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>WhatsApp</span>
+</a>
+</div>
+</div>
+</div>
+<!-- JEEP CARD 2: Willys 4x4 Open Safari Jeep -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+<div class="relative w-full h-44">
+<img class="w-full h-full object-cover" data-alt="A classic vintage open-top army green 4x4 Willys safari mountain jeep with roll bars driving past golden autumn apricot trees along the Hunza river bank with Rakaposhi mountain towering high in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHjwHk9nkk89VKdRcJ1uxvAH1qWZBt11o4-at_0frmPj4hgLBlzPZFIbzm0XYDEnLsBmyh_KR9nbBoNWFyCGLguD351_LEX-NnbITTIoVZGRXSJIa5VnIXnUNlL-FmulvNk0GKsHw2do8KUQzZVqbKe-_ZvIsnZMTJMsITDI8hY2Y1NII4Sw04pr81W8gsCUWPSdw84gfdLMkhgT_2v35ZOLWK_gPL6cxASb_YObOKF-AeCx26VVem"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 bg-secondary text-on-secondary px-2.5 py-1 rounded-full font-label-sm text-label-sm font-bold shadow-sm">
+          Classic Open Safari
+        </div>
+<div class="absolute bottom-3 left-3 right-3 flex items-end justify-between text-on-primary">
+<h3 class="font-headline-sm text-headline-sm font-bold text-white drop-shadow">Willys 4x4 Mountain Cruiser</h3>
+<div class="text-right">
+<p class="font-currency-pkr text-currency-pkr text-secondary-fixed font-black">PKR 12,000</p>
+<p class="font-label-sm text-label-sm text-slate-200">/ day + Driver</p>
+</div>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">groups</span> 6 Passengers</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">explore</span> Khunjerab &amp; Passu</span>
+<span class="flex items-center gap-1 text-secondary font-semibold"><span class="material-symbols-outlined text-[16px]">photo_camera</span> 360° Open View</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center font-bold text-primary font-label-sm text-label-sm">
+              JA
+            </div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Driver: Jamshed Ali (Hunza)</p>
+<p class="font-body-sm text-body-sm text-outline">Attabad Lake &amp; Hopper Glacier Expert</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-lowest px-2 py-1 rounded-full text-primary font-bold">4.95 ★</span>
+</div>
+<div class="flex items-center gap-space-xs pt-1">
+<button class="flex-[65] py-2.5 bg-primary hover:bg-primary-container text-on-primary rounded-xl font-label-md text-label-md font-bold flex items-center justify-center gap-1" onclick="openBookingDrawer('Willys 4x4 Open Safari Jeep', 'PKR 12,000', 'Jamshed Ali')">
+<span>Book Open Jeep</span>
+</button>
+<a class="flex-[35] py-2.5 bg-surface-container-low text-[#128C7E] rounded-xl font-label-md text-label-md font-bold flex items-center justify-center gap-1" href="https://wa.me/923000000000" target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Inquire</span>
+</a>
+</div>
+</div>
+</div>
+<!-- JEEP CARD 3: Toyota Hilux Revo 4x4 Expedition -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+<div class="relative w-full h-44">
+<img class="w-full h-full object-cover" data-alt="A modern matte black Toyota Hilux Revo 4x4 expedition truck fitted with heavy duty bull-bar and all-terrain suspension parked beside the turquoise glacial waters of Attabad Lake Hunza under clear alpine skies." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIuX15Hq827P4SMBeK7-8cTNCgAB2TCCbz_5F2vf208vrO8t4VRBVWw0J4S7Rc9FmSUYrcASy17-u6vsAmI3dQGi4B3k-3iAoqkSrSWX3-SVTu3qCP98B3k8HkBI8JA7n7tbu4qWzI3o0vkbaXEpzpH6CqW5jBQx-Y61n-tHMfIprQE64HNUXgCxrpcSdRTZ5_ZiHHNNokFnSkgBG0-EGc3pkex2GWViDj3vRtZJLWNP13JQEd7M3F"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 bg-primary text-on-primary px-2.5 py-1 rounded-full font-label-sm text-label-sm font-bold shadow-sm">
+          Heavy Duty Expedition
+        </div>
+<div class="absolute bottom-3 left-3 right-3 flex items-end justify-between text-on-primary">
+<h3 class="font-headline-sm text-headline-sm font-bold text-white drop-shadow">Toyota Hilux Revo 4x4</h3>
+<div class="text-right">
+<p class="font-currency-pkr text-currency-pkr text-secondary-fixed font-black">PKR 22,000</p>
+<p class="font-label-sm text-label-sm text-slate-200">/ day + Driver</p>
+</div>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">airline_seat_recline_normal</span> 5 Adults</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">local_shipping</span> 800kg Bed Cargo</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">military_tech</span> K2 Base Shigar</span>
+</div>
+<div class="flex items-center gap-space-xs pt-1">
+<button class="flex-[65] py-2.5 bg-primary hover:bg-primary-container text-on-primary rounded-xl font-label-md text-label-md font-bold flex items-center justify-center gap-1" onclick="openBookingDrawer('Toyota Hilux Revo 4x4', 'PKR 22,000', 'Senior Fleet Driver')">
+<span>Book Revo 4x4</span>
+</button>
+<a class="flex-[35] py-2.5 bg-surface-container-low text-[#128C7E] rounded-xl font-label-md text-label-md font-bold flex items-center justify-center gap-1" href="https://wa.me/923000000000" target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>WhatsApp</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: Popular Tourist Routes & Live Pass Status -->
+<section class="mt-space-lg px-margin flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Live Mountain Pass Status</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time alerts verified by GB Traffic Police</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[22px]">traffic</span>
+</div>
+<!-- Route Status Cards -->
+<div class="flex flex-col gap-space-xs">
+<!-- Babusar Pass Route -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">alt_route</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate font-bold">Naran ➔ Chilas via Babusar Pass</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Est. 4.5 hrs • 4,173m Elevation</p>
+</div>
+</div>
+<div class="shrink-0 text-right">
+<span class="inline-flex items-center gap-1 bg-[#ECFDF5] text-[#065F46] font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span> Open
+          </span>
+<p class="font-label-sm text-label-sm text-outline mt-0.5">Smooth flow</p>
+</div>
+</div>
+<!-- KKH Gilgit to Hunza -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">explore</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate font-bold">Gilgit ➔ Karimabad (KKH N-35)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Est. 2 hrs • Asphalt Carpet</p>
+</div>
+</div>
+<div class="shrink-0 text-right">
+<span class="inline-flex items-center gap-1 bg-[#ECFDF5] text-[#065F46] font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span> Clear
+          </span>
+<p class="font-label-sm text-label-sm text-outline mt-0.5">Ideal drive</p>
+</div>
+</div>
+<!-- Skardu Jaglot Highway -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate font-bold">Jaglot ➔ Skardu S-1 Highway</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Est. 4 hrs • Astak Gorge widening</p>
+</div>
+</div>
+<div class="shrink-0 text-right">
+<span class="inline-flex items-center gap-1 bg-[#FFFBEB] text-[#B45309] font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#F59E0B]"></span> Slow Move
+          </span>
+<p class="font-label-sm text-label-sm text-outline mt-0.5">Single lane at km 42</p>
+</div>
+</div>
+<!-- Khunjerab Border Highway -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[20px]">ac_unit</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate font-bold">Passu ➔ Khunjerab China Border</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Est. 3 hrs • 4,693m Zero Point</p>
+</div>
+</div>
+<div class="shrink-0 text-right">
+<span class="inline-flex items-center gap-1 bg-[#ECFDF5] text-[#065F46] font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span> Open
+          </span>
+<p class="font-label-sm text-label-sm text-outline mt-0.5">Snow chains opt.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Map Exploration Teaser -->
+<section class="mt-space-lg px-margin">
+<div class="relative rounded-xl overflow-hidden shadow-sm">
+<div class="w-full h-44 bg-cover bg-center" data-location="Gilgit-Baltistan Highway, Pakistan" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5GCPec5z0T0lsvcxxA5SBmR0FRN2zkhtOt0iW6rgG3gExra2YHwOQlHNHkNgdLfXEOf_q-KHNn5JNvAov3PutJ2fcMS-iSn7y76H81ZaYkdH8k_e98nkdrtDIHYHgzxCxtYejzeYWesOGHjE8KflGvCfPoXTyireLYQ51OwT9BnS8VjdRz_N5Phq1MOxywydj1Wkfoy8qFiafAFtCTGbVyX41_Z8w0T1ayJ0pYCmqTeYpS_kQI6Tl')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent flex flex-col justify-end p-space-md text-on-primary">
+<div class="flex items-center gap-1 text-secondary-fixed mb-1">
+<span class="material-symbols-outlined text-[18px]">satellite_alt</span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider">Live Alpine GPS Grid</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold">Interactive Route Explorer</h4>
+<p class="font-body-sm text-body-sm text-slate-200 mt-0.5">Explore petrol pumps, mechanic stations, and mountain rest houses.</p>
+<button class="mt-3 w-fit px-4 py-2 bg-surface-container-lowest text-primary rounded-lg font-label-md text-label-md font-bold shadow-md hover:bg-surface-container-low transition-colors flex items-center gap-1.5">
+<span>Launch Full Alpine Map</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Alpine Booking Modal / Bottom Sheet Trigger Simulation -->
+<div class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex-col justify-end transition-opacity" id="booking-drawer">
+<div class="bg-surface-container-lowest w-full rounded-t-2xl p-space-md shadow-2xl flex flex-col gap-space-md max-h-[795px] overflow-y-auto">
+<div class="w-12 h-1.5 bg-outline-variant/60 rounded-full mx-auto"></div>
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Fast Vehicle Dispatch</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold" id="modal-vehicle-title">Toyota Land Cruiser Prado TZ</h3>
+<p class="font-currency-pkr text-currency-pkr text-secondary font-bold" id="modal-vehicle-rate">PKR 18,500 / day</p>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-outline hover:text-on-surface" onclick="closeBookingDrawer()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">verified_user</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Assigned Chauffeur: <span id="modal-driver-name">Ustad Karim</span></p>
+<p class="font-body-sm text-body-sm text-outline">Verified Police Clearance • Oxygen Kit Onboard</p>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Your Full Name</label>
+<input class="w-full bg-surface-container-low px-3 py-2.5 rounded-lg text-on-surface outline-none font-body-md text-body-md" placeholder="e.g. Asad Mansoor" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant">Pickup Date</label>
+<input class="w-full bg-surface-container-low px-3 py-2 rounded-lg text-on-surface outline-none font-body-sm text-body-sm" type="date" value="2024-10-14"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant">Trip Duration</label>
+<select class="w-full bg-surface-container-low px-3 py-2.5 rounded-lg text-on-surface outline-none font-body-sm text-body-sm">
+<option>3 Days Expedition</option>
+<option>5 Days Hunza &amp; Skardu</option>
+<option>7 Days Grand Circuit</option>
+<option>Single Day Trip</option>
+</select>
+</div>
+</div>
+<div class="bg-primary-fixed/30 p-space-sm rounded-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<p class="font-body-sm text-body-sm text-on-primary-fixed-variant">
+          No Advance Payment Required. Pay via cash or GB One Pay directly to driver upon pickup.
+        </p>
+</div>
+<button class="w-full py-3.5 bg-primary hover:bg-primary-container text-on-primary rounded-xl font-label-lg text-label-lg font-bold shadow-md transition-transform active:scale-98" onclick="submitBookingRequest()">
+        Confirm Booking Request
+      </button>
+</div>
+</div>
+<!-- Toast Notification -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-primary text-on-primary px-4 py-2.5 rounded-full shadow-lg font-label-md text-label-md flex items-center gap-2 opacity-0 pointer-events-none transition-all duration-300" id="toast">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span id="toast-message">Trip request confirmed!</span>
+</div>
+</div>
+<script>
+  function switchMainTab(mode) {
+    const tabs = ['scheduled', 'jeeps', 'airport'];
+    tabs.forEach(t => {
+      const el = document.getElementById('tab-' + t);
+      if (t === mode) {
+        el.className = 'py-2 rounded-md font-label-md text-label-md text-center transition-all bg-primary text-on-primary shadow-sm flex items-center justify-center gap-1';
+      } else {
+        el.className = 'py-2 rounded-md font-label-md text-label-md text-center text-on-surface-variant transition-all hover:text-primary flex items-center justify-center gap-1';
+      }
+    });
+
+    if (mode === 'airport') {
+      document.getElementById('dest-input').value = 'Gilgit Airport (GIL) / Skardu Airport (KDU)';
+      showToast('Switched to Airport Meet & Greet');
+    } else if (mode === 'jeeps') {
+      document.getElementById('dest-input').value = 'Deosai Plains / Khunjerab Pass';
+      showToast('Switched to 4x4 Mountain Fleet');
+    } else {
+      document.getElementById('dest-input').value = 'Hunza (Karimabad) & Skardu';
+      showToast('Switched to Inter-City Transport');
+    }
+  }
+
+  function swapDestinations() {
+    const input = document.getElementById('dest-input');
+    const current = input.value;
+    input.value = 'Islamabad / Rawalpindi (Direct)';
+    showToast('Route reversed: Returning to Capital');
+  }
+
+  function triggerSearchAnimation() {
+    showToast('Scanning 48 available mountain transports...');
+  }
+
+  function shareRoute(routeName) {
+    if (navigator.share) {
+      navigator.share({
+        title: 'GB One Travel',
+        text: 'Check departure schedules for ' + routeName + ' on Gilgit Baltistan One App.',
+        url: window.location.href,
+      }).catch(() => {});
+    } else {
+      showToast('Link copied to clipboard!');
+    }
+  }
+
+  function openSeatModal(title, rate) {
+    document.getElementById('modal-vehicle-title').textContent = title;
+    document.getElementById('modal-vehicle-rate').textContent = rate + ' / seat';
+    document.getElementById('modal-driver-name').textContent = 'NATCO Assigned Captain';
+    document.getElementById('booking-drawer').classList.remove('hidden');
+    document.getElementById('booking-drawer').classList.add('flex');
+  }
+
+  function openBookingDrawer(title, rate, driver) {
+    document.getElementById('modal-vehicle-title').textContent = title;
+    document.getElementById('modal-vehicle-rate').textContent = rate + ' + Fuel';
+    document.getElementById('modal-driver-name').textContent = driver;
+    document.getElementById('booking-drawer').classList.remove('hidden');
+    document.getElementById('booking-drawer').classList.add('flex');
+  }
+
+  function closeBookingDrawer() {
+    document.getElementById('booking-drawer').classList.add('hidden');
+    document.getElementById('booking-drawer').classList.remove('flex');
+  }
+
+  function submitBookingRequest() {
+    closeBookingDrawer();
+    showToast('Booking request sent! Driver will contact in 15 mins.');
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toast-message');
+    toastMsg.textContent = msg;
+    toast.classList.remove('opacity-0', 'pointer-events-none');
+    toast.classList.add('opacity-100');
+    setTimeout(() => {
+      toast.classList.add('opacity-0', 'pointer-events-none');
+      toast.classList.remove('opacity-100');
+    }, 2800);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-label-lg"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="font-label-sm text-label-sm">Home</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] transition-colors text-primary font-label-lg" data-path="travel" href="#"><span class="material-symbols-outlined text-[22px]">directions_car</span><span class="font-label-sm text-label-sm">Travel</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="hotels" href="#"><span class="material-symbols-outlined text-[22px]">hotel</span><span class="font-label-sm text-label-sm">Hotels</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="shop" href="#"><span class="material-symbols-outlined text-[22px]">storefront</span><span class="font-label-sm text-label-sm">Shop</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="services" href="#"><span class="material-symbols-outlined text-[22px]">handyman</span><span class="font-label-sm text-label-sm">Services</span></a></div></nav></body></html>

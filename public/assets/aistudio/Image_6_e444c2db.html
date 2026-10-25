@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#faf8ff", "on-primary-fixed-variant": "#00513b", "on-surface-variant": "#3f4944", "surface-container-lowest": "#ffffff", "primary-fixed": "#a6f2d1", "surface": "#faf8ff", "surface-container-high": "#e2e7ff", "on-primary": "#ffffff", "secondary": "#904d00", "on-tertiary-fixed-variant": "#004b73", "tertiary-fixed-dim": "#93ccff", "primary": "#004532", "inverse-on-surface": "#eef0ff", "secondary-fixed-dim": "#ffb77d", "surface-variant": "#dae2fd", "tertiary": "#004063", "on-primary-fixed": "#002116", "on-secondary-fixed-variant": "#6e3900", "surface-container-low": "#f2f3ff", "error-container": "#ffdad6", "on-background": "#131b2e", "surface-container-highest": "#dae2fd", "inverse-primary": "#8bd6b6", "error": "#ba1a1a", "primary-container": "#065f46", "outline": "#6f7973", "tertiary-container": "#005887", "secondary-container": "#fe932c", "tertiary-fixed": "#cce5ff", "on-secondary-fixed": "#2f1500", "on-tertiary-fixed": "#001d31", "on-tertiary-container": "#95cdff", "on-secondary": "#ffffff", "outline-variant": "#bec9c2", "on-error-container": "#93000a", "on-surface": "#131b2e", "surface-dim": "#d2d9f4", "on-error": "#ffffff", "background": "#faf8ff", "surface-tint": "#1b6b51", "inverse-surface": "#283044", "primary-fixed-dim": "#8bd6b6", "on-secondary-container": "#663500", "on-tertiary": "#ffffff", "on-primary-container": "#8bd6b7", "surface-container": "#eaedff", "secondary-fixed": "#ffdcc3" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1rem", "gutter-desktop": "1.5rem", "space-2xs": "0.125rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-xl": "2rem", "space-md": "1rem", "margin-desktop": "2rem", "space-2xl": "3rem", "space-lg": "1.5rem", "gutter": "1rem" }, "fontFamily": { "headline-lg": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"], "label-lg": ["Plus Jakarta Sans"], "currency-pkr": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "body-sm": ["Inter"], "label-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"] }, "fontSize": { "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "700" }], "currency-pkr": ["16px", { "lineHeight": "20px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "700" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="GB One Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WDHrQC9Y1-4UeZ_lqj8t17--erpPR6yG2G0CD5zRb79Lk6CgwvESznZ5PTlIlcxXSU50nImnkyCdJp7fxkh05otAZEfcQav4JaNT2R4RLKtGIVF6v8fW8EYKuX38_e6pvqBn6MkBQwNflTyjsv6Te9FJ6jsrEQioCGtK-NgQyCTmxeD90VWzwW6IZ8nl3EMa9MpjrkUsqt4hVE3NjmQtos1iHvMudjDLS2sNQ0k5x6BV9p6jiP9QB_2g"/><span class="font-headline-sm text-headline-sm text-primary hidden sm:inline">GB One</span></div><div class="flex flex-col items-center justify-center"><div class="flex items-center gap-space-2xs bg-surface-container-low px-space-sm py-space-2xs rounded-full"><span class="material-symbols-outlined text-primary text-[14px]">location_on</span><span class="font-label-sm text-label-sm text-on-surface">Hunza &amp; Gilgit</span><span class="material-symbols-outlined text-outline text-[12px]">expand_more</span></div><span class="font-label-sm text-label-sm text-outline mt-0.5">Hotels</span></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">notifications</span></button><div class="w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHZlfIfvo_ZKfpUDNHVIGTwJ7cOmrdRBnawDjmHO5Ta8pd2GllPDG1tJtbQKkGPFLkiKLD0P1jeIUm_6a8UBgJE540_DEUatYpdqD-MU9TYyZg1THVHkyNLpOuJOywdVXD9LPhPezJBp7nV0k_6hJ9iGih4ym3GQqoTBGqtvgoGkFQPbYj3AjNgelZOPUCVkK6zb43d_xG92MYxoVnhmmiNlwpnikrIBO1HqYz97tZGhOzjT94HEKP"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Alpine Weather & Advisory Marquee -->
+<section class="px-margin pt-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" style="font-variation-settings: 'FILL' 1;">ac_unit</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Alpine Winter Guide</span>
+<p class="font-body-sm text-body-sm text-on-surface truncate">Heated suites &amp; backup generators verified for cold nights</p>
+</div>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-space-xs py-space-2xs rounded-full shrink-0 flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span> 100% Inspected
+      </span>
+</div>
+</section>
+<!-- Destination Pills Ribbon -->
+<section class="mt-space-md">
+<div class="flex items-center justify-between px-margin mb-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Explore Valleys</h2>
+<button class="font-label-md text-label-md text-primary flex items-center">
+        Map View <span class="material-symbols-outlined text-[16px] ml-0.5">map</span>
+</button>
+</div>
+<div class="flex overflow-x-auto gap-space-xs px-margin pb-space-xs scrollbar-none" id="regionPillContainer">
+<button class="region-pill active shrink-0 px-space-md py-space-xs rounded-full font-label-md text-label-md bg-primary text-on-primary shadow-sm transition-all flex items-center gap-1" data-region="all">
+<span class="material-symbols-outlined text-[16px]">travel_explore</span> All Regions
+      </button>
+<button class="region-pill shrink-0 px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm transition-all flex items-center gap-1" data-region="karimabad">
+<span class="material-symbols-outlined text-[16px]">landscape</span> Karimabad Hunza
+      </button>
+<button class="region-pill shrink-0 px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm transition-all flex items-center gap-1" data-region="attabad">
+<span class="material-symbols-outlined text-[16px]">water</span> Attabad Lake
+      </button>
+<button class="region-pill shrink-0 px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm transition-all flex items-center gap-1" data-region="skardu">
+<span class="material-symbols-outlined text-[16px]">sunny_snowing</span> Skardu City
+      </button>
+<button class="region-pill shrink-0 px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm transition-all flex items-center gap-1" data-region="phander">
+<span class="material-symbols-outlined text-[16px]">nature_people</span> Phander Valley
+      </button>
+<button class="region-pill shrink-0 px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm transition-all flex items-center gap-1" data-region="fairymeadows">
+<span class="material-symbols-outlined text-[16px]">cabin</span> Fairy Meadows
+      </button>
+</div>
+</section>
+<!-- Essential Mountain Amenities Quick Filter Bar -->
+<section class="px-margin mt-space-xs">
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm">
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<div class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">tune</span>
+<span class="font-label-md text-label-md text-on-surface">Alpine Stay Filters</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline" id="activeFilterCounter">2 Active</span>
+</div>
+<div class="flex overflow-x-auto gap-space-xs scrollbar-none pb-0.5">
+<!-- Room Heating is high-priority in GB -->
+<button class="filter-toggle shrink-0 bg-primary-fixed text-on-primary-fixed-variant px-space-sm py-1 rounded-lg font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">heat</span> Room Heater
+        </button>
+<button class="filter-toggle shrink-0 bg-primary-fixed text-on-primary-fixed-variant px-space-sm py-1 rounded-lg font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">electric_bolt</span> 24/7 Generator
+        </button>
+<button class="filter-toggle shrink-0 bg-surface-container-low text-on-surface-variant hover:bg-surface-container px-space-sm py-1 rounded-lg font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">wifi</span> Fiber Wi-Fi
+        </button>
+<button class="filter-toggle shrink-0 bg-surface-container-low text-on-surface-variant hover:bg-surface-container px-space-sm py-1 rounded-lg font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">landscape</span> Mountain View
+        </button>
+<button class="filter-toggle shrink-0 bg-surface-container-low text-on-surface-variant hover:bg-surface-container px-space-sm py-1 rounded-lg font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">bakery_dining</span> Free Breakfast
+        </button>
+</div>
+</div>
+</section>
+<!-- Featured Stays Section -->
+<section class="px-margin mt-space-lg flex flex-col gap-space-md">
+<div class="flex items-end justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold tracking-wider uppercase">Verified Hospitality</span>
+<h3 class="font-display-lg-mobile text-display-lg-mobile text-on-surface mt-0.5">Top Lodges &amp; Resorts</h3>
+</div>
+<span class="font-body-sm text-body-sm text-outline">3 Premier Picks</span>
+</div>
+<!-- Stay Card 1: Luxus Hunza Resort -->
+<article class="bg-surface-container-lowest rounded-xl shadow-md overflow-hidden transition-all duration-200 hover:shadow-lg">
+<!-- Media Header with Carousel Thumbnails -->
+<div class="relative w-full h-56 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Luxus Hunza Resort perched gracefully on the vibrant turquoise Attabad Lake water shoreline in Gilgit Baltistan with high jagged sunlit Karakoram peaks behind it, crystal clear mountain daylight, luxurious wooden balconies over emerald alpine waters, modern architecture blended with Hunza stone textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDKmHswWHWmSBTTnn7V1WJgkeOS3e81bOeGSYdW_9mYh5j6K-Dp0E7SVFQvJdZgljT5AALWiIkiStYN-cJohF64c6SaOkiBmM9m1zvk5oPuEjoi8M2NZwzzmW11iJ02cR2wWTgcKrxtCk27Oj6QtbXnVmhJoCFPRQw4n9pLUYBC2dQqcmUEPtoxEipCfjXAiMSo_FPcUu2OD7vxq5zqirhXQAbDPgm4Gew9XIWs3IyTHT9T1FKRGlL"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/70 via-transparent to-black/20 pointer-events-none"></div>
+<!-- Status & Badge Overlays -->
+<div class="absolute top-space-sm left-space-sm flex flex-wrap gap-1">
+<span class="bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Lakefront Luxury
+          </span>
+<span class="bg-secondary text-on-secondary font-label-sm text-label-sm px-2 py-1 rounded-full shadow-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">local_fire_department</span> High Demand
+          </span>
+</div>
+<button aria-label="Add to favorites" class="absolute top-space-sm right-space-sm w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite_border</span>
+</button>
+<!-- Image Indicator Dots -->
+<div class="absolute bottom-2.5 left-1/2 -translate-x-1/2 flex items-center gap-1.5 bg-black/40 px-2 py-0.5 rounded-full backdrop-blur-sm">
+<span class="w-2 h-2 rounded-full bg-surface-container-lowest"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest/50"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest/50"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest/50"></span>
+</div>
+</div>
+<!-- Content Body -->
+<div class="p-space-md flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Luxus Hunza Resort</h4>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span>
+<span>Attabad Lakefront, Gojal Hunza</span>
+</div>
+</div>
+<!-- Star Rating Pill -->
+<div class="bg-secondary-fixed text-on-secondary-fixed flex items-center gap-1 px-2 py-1 rounded-lg shrink-0">
+<span class="material-symbols-outlined text-[16px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-currency-pkr text-[14px]">4.9</span>
+<span class="font-body-sm text-[11px] text-on-secondary-fixed-variant">(142)</span>
+</div>
+</div>
+<!-- Amenities Chips -->
+<div class="flex flex-wrap gap-1.5 my-space-xs">
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded-md font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">deck</span> Lake Balcony
+          </span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded-md font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">downloading</span> Room Heater
+          </span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded-md font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">wifi</span> Free Wi-Fi
+          </span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded-md font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">bolt</span> 24/7 Generator
+          </span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded-md font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">restaurant</span> Breakfast Included
+          </span>
+</div>
+<!-- Pricing & Action Bar -->
+<div class="flex items-center justify-between pt-space-xs mt-space-2xs">
+<div>
+<div class="flex items-baseline gap-1">
+<span class="font-label-sm text-label-sm text-outline">PKR</span>
+<span class="font-currency-pkr text-[22px] text-primary tracking-tight">28,000</span>
+<span class="font-body-sm text-body-sm text-outline">/ night</span>
+</div>
+<span class="font-label-sm text-[11px] text-secondary block">Taxes &amp; Lake View Fee incl.</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg px-space-md py-2.5 rounded-lg transition-colors flex items-center gap-1.5 shadow-sm active:scale-95" onclick="prefillBooking('Luxus Hunza Resort', '28000')">
+<span>Book Stay</span>
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Stay Card 2: Shangrila Resort Skardu -->
+<article class="bg-surface-container-lowest rounded-xl shadow-md overflow-hidden transition-all duration-200 hover:shadow-lg">
+<div class="relative w-full h-56 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Shangrila Resort Skardu situated right around pristine Lower Kachura Lake with vivid heart-shaped alpine water reflections, traditional Tibetan Chinese inspired pagoda roofs in red and gold trims, lush surrounding apricot and apple orchards, with snow-capped Baltistan peaks towering under crisp blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTRQrD_ux0fetVp6ZgHBGyU8RaIBfIIQBir6DJHmNAhgnVHkgNZjhpg2x9nkcjQA340xIJkTf45b-Y-D2NG5hn0bVjynRLPwZy_m_XI6LNfYiUb-L7ns5IP_DE8u0snZTVGdorpTgVBxEJAw83WQsnLY2LwDc-fjsx3fX7cZYt3ocHiLhpS609PKe68zT8Cwa09HG57Nvr3Vr2yjb8B_xE66LVzmPJ3QhI865zB_tDcvt77VkS7u6N"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/70 via-transparent to-black/20 pointer-events-none"></div>
+<div class="absolute top-space-sm left-space-sm flex flex-wrap gap-1">
+<span class="bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">temple_buddhist</span> Heritage Resort
+          </span>
+</div>
+<button aria-label="Add to favorites" class="absolute top-space-sm right-space-sm w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite_border</span>
+</button>
+<div class="absolute bottom-2.5 left-1/2 -translate-x-1/2 flex items-center gap-1.5 bg-black/40 px-2 py-0.5 rounded-full backdrop-blur-sm">
+<span class="w-2 h-2 rounded-full bg-surface-container-lowest"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest/50"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest/50"></span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Shangrila Resort Skardu</h4>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span>
+<span>Lower Kachura Lake, Skardu</span>
+</div>
+</div>
+<div class="bg-secondary-fixed text-on-secondary-fixed flex items-center gap-1 px-2 py-1 rounded-lg shrink-0">
+<span class="material-symbols-outlined text-[16px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-currency-pkr text-[14px]">4.8</span>
+<span class="font-body-sm text-[11px] text-on-secondary-fixed-variant">(98)</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1.5 my-space-xs">
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded-md font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">landscape</span> Pagoda Mountain View
+          </span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded-md font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">airport_shuttle</span> Airport Shuttle
+          </span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded-md font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">park</span> Organic Garden
+          </span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded-md font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">fireplace</span> Central Heating
+          </span>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-space-2xs">
+<div>
+<div class="flex items-baseline gap-1">
+<span class="font-label-sm text-label-sm text-outline">PKR</span>
+<span class="font-currency-pkr text-[22px] text-primary tracking-tight">24,500</span>
+<span class="font-body-sm text-body-sm text-outline">/ night</span>
+</div>
+<span class="font-label-sm text-[11px] text-primary block">Shuttle included on 2+ nights</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg px-space-md py-2.5 rounded-lg transition-colors flex items-center gap-1.5 shadow-sm active:scale-95" onclick="prefillBooking('Shangrila Resort Skardu', '24500')">
+<span>Book Stay</span>
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Stay Card 3: Rakaposhi View Camp & Cottages -->
+<article class="bg-surface-container-lowest rounded-xl shadow-md overflow-hidden transition-all duration-200 hover:shadow-lg">
+<div class="relative w-full h-56 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Charming alpine Rakaposhi View cottages and glamping dome cabins in Minapin Nagar Gilgit Baltistan, surrounded by golden apricot trees with the imposing colossal snow face of Mount Rakaposhi dominating the background, outdoor evening bonfire pit glowing warmly in the twilight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATYizf1qCd8wF4vFyk3JcaVo8hIuZFaT-OtTQYGktm1q58l_dIldq_I1zGrXKEAKVmA-NgJZTaHOKxG0qPc1Mcs8y4dIDOomseUgDlrpOxEMfTJV2TZRH762JeHBbmzje3a_ZmScpuLM2WkA-6IdCE0wxxzQSh8lHMdOtZlfcFBt9XWBhA5x1lyDkXl-hFLE2w5aHZBmJ-ULxcQeBs2rCL04qa5vbai29o1np5BnMV31vcXZyUNwWJ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/70 via-transparent to-black/20 pointer-events-none"></div>
+<div class="absolute top-space-sm left-space-sm flex flex-wrap gap-1">
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">eco</span> Budget Friendly &amp; Cozy
+          </span>
+</div>
+<button aria-label="Add to favorites" class="absolute top-space-sm right-space-sm w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite_border</span>
+</button>
+<div class="absolute bottom-2.5 left-1/2 -translate-x-1/2 flex items-center gap-1.5 bg-black/40 px-2 py-0.5 rounded-full backdrop-blur-sm">
+<span class="w-2 h-2 rounded-full bg-surface-container-lowest"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest/50"></span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Rakaposhi View Camp &amp; Cottages</h4>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span>
+<span>Minapin Nagar Valley</span>
+</div>
+</div>
+<div class="bg-secondary-fixed text-on-secondary-fixed flex items-center gap-1 px-2 py-1 rounded-lg shrink-0">
+<span class="material-symbols-outlined text-[16px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-currency-pkr text-[14px]">4.7</span>
+<span class="font-body-sm text-[11px] text-on-secondary-fixed-variant">(65)</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1.5 my-space-xs">
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded-md font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">local_fire_department</span> Wood Bukhari Heating
+          </span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded-md font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">outdoor_grill</span> Night Bonfires
+          </span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded-md font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">skillet</span> Authentic Local Meals
+          </span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded-md font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">hiking</span> Basecamp Trek Guide
+          </span>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-space-2xs">
+<div>
+<div class="flex items-baseline gap-1">
+<span class="font-label-sm text-label-sm text-outline">PKR</span>
+<span class="font-currency-pkr text-[22px] text-primary tracking-tight">7,500</span>
+<span class="font-body-sm text-body-sm text-outline">/ night</span>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant block">Campfire wood &amp; tea incl.</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg px-space-md py-2.5 rounded-lg transition-colors flex items-center gap-1.5 shadow-sm active:scale-95" onclick="prefillBooking('Rakaposhi View Camp &amp; Cottages', '7500')">
+<span>Book Stay</span>
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- Interactive Alpine Booking Request Card -->
+<section class="px-margin mt-space-xl" id="bookingFormSection">
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-md">
+<!-- Card Header -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">hotel_class</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Alpine Stay Request</h3>
+<p class="font-body-sm text-body-sm text-outline">Instant coordination with verified hosts</p>
+</div>
+</div>
+<span class="bg-surface-container-high text-tertiary font-label-sm text-label-sm px-2.5 py-1 rounded-full">
+          Pay at Check-In
+        </span>
+</div>
+<!-- Selected Property Banner -->
+<div class="mt-space-sm bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px]">apartment</span>
+<div class="truncate">
+<span class="font-label-sm text-label-sm text-outline block">Selected Accommodation</span>
+<span class="font-label-md text-label-md text-on-surface truncate" id="selectedPropertyName">Luxus Hunza Resort (Attabad Lakefront)</span>
+</div>
+</div>
+<span class="font-currency-pkr text-[14px] text-primary shrink-0" id="selectedPropertyPrice">PKR 28,000/nt</span>
+</div>
+<!-- Date & Room Matrix -->
+<div class="grid grid-cols-2 gap-space-xs mt-space-sm">
+<div class="bg-surface-container-low rounded-xl p-space-sm">
+<label class="font-label-sm text-label-sm text-outline block mb-0.5">Check-In</label>
+<div class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">login</span>
+<input class="bg-transparent font-label-md text-label-md text-on-surface w-full focus:outline-none" type="date" value="2025-05-10"/>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-sm">
+<label class="font-label-sm text-label-sm text-outline block mb-0.5">Check-Out</label>
+<div class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">logout</span>
+<input class="bg-transparent font-label-md text-label-md text-on-surface w-full focus:outline-none" type="date" value="2025-05-13"/>
+</div>
+</div>
+</div>
+<!-- Steppers: Guests & Rooms -->
+<div class="grid grid-cols-2 gap-space-xs mt-space-xs">
+<div class="bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Guests</span>
+<span class="font-label-md text-label-md text-on-surface" id="guestCountDisplay">2 Adults</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 rounded-lg bg-surface-container-lowest text-on-surface flex items-center justify-center font-bold shadow-sm" onclick="updateCount('guest', -1)">-</button>
+<button class="w-7 h-7 rounded-lg bg-primary text-on-primary flex items-center justify-center font-bold shadow-sm" onclick="updateCount('guest', 1)">+</button>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Rooms</span>
+<span class="font-label-md text-label-md text-on-surface" id="roomCountDisplay">1 Room</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 rounded-lg bg-surface-container-lowest text-on-surface flex items-center justify-center font-bold shadow-sm" onclick="updateCount('room', -1)">-</button>
+<button class="w-7 h-7 rounded-lg bg-primary text-on-primary flex items-center justify-center font-bold shadow-sm" onclick="updateCount('room', 1)">+</button>
+</div>
+</div>
+</div>
+<!-- Special Requests Chips -->
+<div class="mt-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Mountain Travel Add-ons:</span>
+<div class="flex flex-wrap gap-1.5">
+<label class="flex items-center gap-1.5 bg-surface-container-low px-2.5 py-1.5 rounded-lg text-on-surface font-body-sm text-body-sm cursor-pointer select-none">
+<input checked="" class="rounded text-primary focus:ring-0" type="checkbox"/>
+<span>Extra Wood Heater</span>
+</label>
+<label class="flex items-center gap-1.5 bg-surface-container-low px-2.5 py-1.5 rounded-lg text-on-surface font-body-sm text-body-sm cursor-pointer select-none">
+<input class="rounded text-primary focus:ring-0" type="checkbox"/>
+<span>Baby Cot</span>
+</label>
+<label class="flex items-center gap-1.5 bg-surface-container-low px-2.5 py-1.5 rounded-lg text-on-surface font-body-sm text-body-sm cursor-pointer select-none">
+<input checked="" class="rounded text-primary focus:ring-0" type="checkbox"/>
+<span>Skardu/Gilgit Airport Jeep</span>
+</label>
+</div>
+</div>
+<!-- Payment Assurance & Action -->
+<div class="mt-space-md pt-space-xs flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>
+<span>No upfront credit card required</span>
+</div>
+<span class="font-label-sm text-[10px] bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded-full">
+            Online Cards Q3
+          </span>
+</div>
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg py-3.5 rounded-xl shadow-md transition-all active:scale-[0.98] flex items-center justify-center gap-2" id="submitRequestBtn" onclick="triggerBookingConfirmation()">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Submit Booking Request</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Direct Host Contact & Emergency Support Dock -->
+<section class="px-margin mt-space-lg mb-space-lg">
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+<h4 class="font-label-lg text-label-lg text-on-surface">Urgent Booking or Road Inquiries?</h4>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Hunza Host Desk</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+        Speak directly with on-ground hospitality managers for winter road passes, heater status, and immediate confirmation.
+      </p>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Direct WhatsApp -->
+<a class="bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#128C7E] font-label-md text-label-md py-3 px-space-sm rounded-xl flex items-center justify-center gap-2 transition-colors" href="https://wa.me/923000000000" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>WhatsApp Host</span>
+</a>
+<!-- Direct Helpline Call -->
+<a class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md py-3 px-space-sm rounded-xl flex items-center justify-center gap-2 transition-colors shadow-sm" href="tel:+92581100000">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span>Direct Call</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Interactive Alpine Delight Drawer (Success State Notification) -->
+<div class="fixed bottom-20 left-4 right-4 bg-primary text-on-primary p-4 rounded-xl shadow-2xl transform translate-y-32 opacity-0 transition-all duration-300 pointer-events-none z-50 flex items-center gap-3" id="bookingToast">
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">check_circle</span>
+</div>
+<div class="flex-1 min-w-0">
+<h5 class="font-label-lg text-label-lg truncate">Booking Inquiry Sent!</h5>
+<p class="font-body-sm text-body-sm text-on-primary/80 truncate">Host notified on WhatsApp. Check SMS for voucher.</p>
+</div>
+<button class="text-on-primary/80 hover:text-on-primary p-1" onclick="hideToast()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<script>
+  // Simple state management for demo interactions
+  let guests = 2;
+  let rooms = 1;
+
+  function updateCount(type, delta) {
+    if (type === 'guest') {
+      guests = Math.max(1, Math.min(10, guests + delta));
+      document.getElementById('guestCountDisplay').textContent = guests + (guests === 1 ? ' Adult' : ' Adults');
+    } else if (type === 'room') {
+      rooms = Math.max(1, Math.min(5, rooms + delta));
+      document.getElementById('roomCountDisplay').textContent = rooms + (rooms === 1 ? ' Room' : ' Rooms');
+    }
+  }
+
+  function prefillBooking(name, price) {
+    document.getElementById('selectedPropertyName').textContent = name;
+    document.getElementById('selectedPropertyPrice').textContent = 'PKR ' + Number(price).toLocaleString() + '/nt';
+    
+    // Smooth scroll to request card
+    const target = document.getElementById('bookingFormSection');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  function triggerBookingConfirmation() {
+    const btn = document.getElementById('submitRequestBtn');
+    btn.innerHTML = `<span class="material-symbols-outlined animate-spin text-[20px]">sync</span> Confirming with Lodge...`;
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[20px]">check</span> Inquiry Dispatched!`;
+      btn.classList.add('bg-primary-container');
+
+      // Show Delight Toast
+      const toast = document.getElementById('bookingToast');
+      toast.classList.remove('translate-y-32', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        btn.innerHTML = `<span class="material-symbols-outlined text-[20px]">send</span> Submit Booking Request`;
+        btn.classList.remove('bg-primary-container');
+        btn.disabled = false;
+      }, 4000);
+
+      setTimeout(() => {
+        hideToast();
+      }, 5000);
+    }, 900);
+  }
+
+  function hideToast() {
+    const toast = document.getElementById('bookingToast');
+    toast.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
+    toast.classList.remove('translate-y-0', 'opacity-100');
+  }
+
+  // Region pills selection micro-interaction
+  document.querySelectorAll('.region-pill').forEach(pill => {
+    pill.addEventListener('click', function() {
+      document.querySelectorAll('.region-pill').forEach(p => {
+        p.classList.remove('bg-primary', 'text-on-primary');
+        p.classList.add('bg-surface-container-lowest', 'text-on-surface');
+      });
+      this.classList.add('bg-primary', 'text-on-primary');
+      this.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+    });
+  });
+
+  // Filter chips active toggle
+  document.querySelectorAll('.filter-toggle').forEach(chip => {
+    chip.addEventListener('click', function() {
+      if (this.classList.contains('bg-primary-fixed')) {
+        this.classList.remove('bg-primary-fixed', 'text-on-primary-fixed-variant');
+        this.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+      } else {
+        this.classList.add('bg-primary-fixed', 'text-on-primary-fixed-variant');
+        this.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+      }
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-label-lg"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="travel" href="#"><span class="material-symbols-outlined text-[22px]">directions_car</span><span class="font-label-sm text-label-sm">Travel</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] transition-colors text-primary font-label-lg" data-path="hotels" href="#"><span class="material-symbols-outlined text-[22px]">hotel</span><span class="font-label-sm text-label-sm">Hotels</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="shop" href="#"><span class="material-symbols-outlined text-[22px]">storefront</span><span class="font-label-sm text-label-sm">Shop</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="services" href="#"><span class="material-symbols-outlined text-[22px]">handyman</span><span class="font-label-sm text-label-sm">Services</span></a></div></nav></body></html>

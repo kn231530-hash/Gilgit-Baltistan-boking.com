@@ -1,0 +1,7 @@
+{
+  "name": "Gilgit Baltistan One",
+  "description": "Unified alpine super-app for mountain travel, 4x4 jeep hire, scenic stays, authentic bazaar, and verified local pros across Gilgit-Baltistan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

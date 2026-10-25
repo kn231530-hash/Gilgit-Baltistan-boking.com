@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#faf8ff", "on-primary-fixed-variant": "#00513b", "on-surface-variant": "#3f4944", "surface-container-lowest": "#ffffff", "primary-fixed": "#a6f2d1", "surface": "#faf8ff", "surface-container-high": "#e2e7ff", "on-primary": "#ffffff", "secondary": "#904d00", "on-tertiary-fixed-variant": "#004b73", "tertiary-fixed-dim": "#93ccff", "primary": "#004532", "inverse-on-surface": "#eef0ff", "secondary-fixed-dim": "#ffb77d", "surface-variant": "#dae2fd", "tertiary": "#004063", "on-primary-fixed": "#002116", "on-secondary-fixed-variant": "#6e3900", "surface-container-low": "#f2f3ff", "error-container": "#ffdad6", "on-background": "#131b2e", "surface-container-highest": "#dae2fd", "inverse-primary": "#8bd6b6", "error": "#ba1a1a", "primary-container": "#065f46", "outline": "#6f7973", "tertiary-container": "#005887", "secondary-container": "#fe932c", "tertiary-fixed": "#cce5ff", "on-secondary-fixed": "#2f1500", "on-tertiary-fixed": "#001d31", "on-tertiary-container": "#95cdff", "on-secondary": "#ffffff", "outline-variant": "#bec9c2", "on-error-container": "#93000a", "on-surface": "#131b2e", "surface-dim": "#d2d9f4", "on-error": "#ffffff", "background": "#faf8ff", "surface-tint": "#1b6b51", "inverse-surface": "#283044", "primary-fixed-dim": "#8bd6b6", "on-secondary-container": "#663500", "on-tertiary": "#ffffff", "on-primary-container": "#8bd6b7", "surface-container": "#eaedff", "secondary-fixed": "#ffdcc3" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1rem", "gutter-desktop": "1.5rem", "space-2xs": "0.125rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-xl": "2rem", "space-md": "1rem", "margin-desktop": "2rem", "space-2xl": "3rem", "space-lg": "1.5rem", "gutter": "1rem" }, "fontFamily": { "headline-lg": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"], "label-lg": ["Plus Jakarta Sans"], "currency-pkr": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "body-sm": ["Inter"], "label-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"] }, "fontSize": { "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "700" }], "currency-pkr": ["16px", { "lineHeight": "20px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "700" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="GB One Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WDHrQC9Y1-4UeZ_lqj8t17--erpPR6yG2G0CD5zRb79Lk6CgwvESznZ5PTlIlcxXSU50nImnkyCdJp7fxkh05otAZEfcQav4JaNT2R4RLKtGIVF6v8fW8EYKuX38_e6pvqBn6MkBQwNflTyjsv6Te9FJ6jsrEQioCGtK-NgQyCTmxeD90VWzwW6IZ8nl3EMa9MpjrkUsqt4hVE3NjmQtos1iHvMudjDLS2sNQ0k5x6BV9p6jiP9QB_2g"/><span class="font-headline-sm text-headline-sm text-primary hidden sm:inline">GB One</span></div><div class="flex flex-col items-center justify-center"><div class="flex items-center gap-space-2xs bg-surface-container-low px-space-sm py-space-2xs rounded-full"><span class="material-symbols-outlined text-primary text-[14px]">location_on</span><span class="font-label-sm text-label-sm text-on-surface">Hunza &amp; Gilgit</span><span class="material-symbols-outlined text-outline text-[12px]">expand_more</span></div><span class="font-label-sm text-label-sm text-outline mt-0.5">Shop</span></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">notifications</span></button><div class="w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHZlfIfvo_ZKfpUDNHVIGTwJ7cOmrdRBnawDjmHO5Ta8pd2GllPDG1tJtbQKkGPFLkiKLD0P1jeIUm_6a8UBgJE540_DEUatYpdqD-MU9TYyZg1THVHkyNLpOuJOywdVXD9LPhPezJBp7nV0k_6hJ9iGih4ym3GQqoTBGqtvgoGkFQPbYj3AjNgelZOPUCVkK6zb43d_xG92MYxoVnhmmiNlwpnikrIBO1HqYz97tZGhOzjT94HEKP"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full pb-24">
+<!-- Search & Alpine Location Pill Ribbon -->
+<section class="px-margin pt-space-md pb-space-xs flex flex-col gap-space-sm">
+<div class="relative w-full">
+<div class="flex items-center w-full bg-surface-container-lowest rounded-full shadow-sm px-space-md py-2.5 gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">search</span>
+<input class="w-full bg-transparent border-0 outline-none font-body-md text-body-md text-on-surface placeholder:text-outline" id="market-search" placeholder="Search apricots, gemstones, pure shilajit..." type="text"/>
+<button aria-label="Voice Search" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+</button>
+<button aria-label="Filter Options" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Category Scroller -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1 -mx-margin px-margin">
+<button class="category-chip flex-shrink-0 flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all" data-category="all">
+<span class="material-symbols-outlined text-[16px]">apps</span>
+<span>All Items</span>
+</button>
+<button class="category-chip flex-shrink-0 flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm transition-all" data-category="dry-fruits">
+<span class="material-symbols-outlined text-[16px] text-secondary">nutrition</span>
+<span>Organic Dry Fruits</span>
+</button>
+<button class="category-chip flex-shrink-0 flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm transition-all" data-category="shawls">
+<span class="material-symbols-outlined text-[16px] text-primary">styler</span>
+<span>Woolen &amp; Pakol</span>
+</button>
+<button class="category-chip flex-shrink-0 flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm transition-all" data-category="gemstones">
+<span class="material-symbols-outlined text-[16px] text-tertiary">diamond</span>
+<span>Gemstones &amp; Silver</span>
+</button>
+<button class="category-chip flex-shrink-0 flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm transition-all" data-category="honey">
+<span class="material-symbols-outlined text-[16px] text-secondary">eco</span>
+<span>Mountain Honey</span>
+</button>
+<button class="category-chip flex-shrink-0 flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm transition-all" data-category="tech">
+<span class="material-symbols-outlined text-[16px] text-outline">devices</span>
+<span>Camp Electronics</span>
+</button>
+</div>
+</section>
+<!-- Special GB Specialty Banner -->
+<section class="px-margin py-space-xs">
+<div class="relative w-full overflow-hidden rounded-xl shadow-sm bg-primary-container text-on-primary">
+<div class="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-overlay" data-alt="Sun-drenched organic apricot orchards on steep terraced mountain slopes in Hunza Valley Karakoram range, golden morning light filtering through autumn yellow apricot trees, rustic handmade woven baskets full of amber dried apricots in the foreground, alpine peaks dusted with clean white snow under crisp azure sky." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBYGeSeQy1SsrEwP06wPCERs0xGIZv1odxL_NONAI4m7U8U_C6JflQM0z2NCIlEx1AJrdZGiIDP0F7RLcRIWYyTRyxd-v4zoSzUgicdag8x_J_2mBsgo5F7dHi0GG-Rjn-KigmAmzNgRywIJqymYwB-rQrVpSbIkFbXWUCF6v6tHa6wPORWCW4qKsgB4CDjv1k3Pm1aaX82fbm71wwmGb2yuGoiXqnqVyAzwXgEpqVsBaF7z-33ueOs')"></div>
+<div class="relative z-10 p-space-md flex flex-col gap-1.5">
+<div class="flex items-center gap-space-2xs bg-primary-fixed text-on-primary-fixed w-max px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[13px]">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide">Orchard Direct • Gilgit-Baltistan</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-primary font-bold leading-tight max-w-[280px]">
+          100% Organic Hunza Dry Fruits &amp; Shilajit
+        </h2>
+<p class="font-body-sm text-body-sm text-on-primary-container max-w-[260px] line-clamp-1">
+          Hand-harvested by local alpine cooperative families. Lab tested purity.
+        </p>
+<div class="pt-1 flex items-center gap-2">
+<button class="px-3 py-1.5 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm rounded-lg shadow-sm flex items-center gap-1 active:scale-95 transition-transform">
+<span>Explore Harvest</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-primary/80">Dispatches in 24h</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Marketplace Stats & Guarantee Strip -->
+<section class="px-margin py-space-xs">
+<div class="flex items-center justify-between bg-surface-container-low px-space-md py-2 rounded-xl text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">local_shipping</span>
+<span>Express GB &amp; Nationwide</span>
+</div>
+<div class="h-3 w-px bg-outline-variant"></div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">format_image_left</span>
+<span>100% Native GB Origin</span>
+</div>
+</div>
+</section>
+<!-- Product Catalog Grid -->
+<section class="px-margin pt-space-xs">
+<div class="flex items-center justify-between pb-2.5">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Artisan &amp; Mountain Provisions</h3>
+<p class="font-body-sm text-body-sm text-outline">Direct trade supporting mountain artisans</p>
+</div>
+<span class="bg-surface-container px-2 py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant">6 Available</span>
+</div>
+<div class="grid grid-cols-2 gap-3" id="product-grid">
+<!-- Card 1: Hunza Sun-Dried Apricots -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col justify-between group">
+<div class="relative w-full aspect-[4/3] bg-surface-container">
+<img alt="Hunza Organic Apricots" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Close-up commercial product shot of glowing amber Hunza sun dried apricots without sulfur arranged neatly on rustic hand-carved walnut wood platter, soft sunlight highlighting crystalline sweetness, snowy Rakaposhi peak soft out-of-focus background, warm authentic organic food photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnmuPmXgM3BmgqymfmsfQyImTXL6iw5BWbYYcv2PGgvi2G96jtIMLCikLwf3odENQ9vECAkYz3qeO7paXMWzb99kfDrsv_y23mkO1knJ3m0-98xLB1m56SEzX9FSY8W4SIexL7uBNTP-cRXB-M1w6z-yidNmAm9ANrBYdGz3mi2UbhZb9wm_AWzI6kryRMKJjQtXYPQBf2k2QD5NqmYq60vIPivMBy7cQp2qdV3m_Rn5cG2TOEZGUK"/>
+<span class="absolute top-2 left-2 bg-error text-on-error font-label-sm text-label-sm px-1.5 py-0.5 rounded-full shadow-sm">
+            -20% OFF
+          </span>
+<button aria-label="Favorite" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-outline active:text-error transition-colors">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<div class="absolute bottom-1.5 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-1.5 py-0.5 rounded-md flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[12px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">4.9</span>
+<span class="font-body-sm text-body-sm text-outline">(128)</span>
+</div>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between gap-1.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">verified</span>
+<span class="font-label-sm text-label-sm text-primary truncate">Mountain Harvest Hunza</span>
+</div>
+<h4 class="font-headline-sm text-[14px] leading-snug text-on-surface line-clamp-2">
+              Hunza Organic Sun-Dried Apricots (1 Kg)
+            </h4>
+<div class="flex items-center gap-1">
+<span class="h-1.5 w-1.5 rounded-full bg-secondary-container"></span>
+<span class="font-label-sm text-label-sm text-secondary">Only 5 left in Karimabad</span>
+</div>
+</div>
+<div class="pt-1 flex flex-col gap-2">
+<div class="flex items-baseline gap-1.5">
+<span class="font-currency-pkr text-currency-pkr text-primary">PKR 1,450</span>
+<span class="font-body-sm text-body-sm line-through text-outline">1,800</span>
+</div>
+<div class="grid grid-cols-4 gap-1">
+<button class="col-span-3 bg-primary text-on-primary py-1.5 px-2 rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 active:scale-95 transition-transform" onclick="addToCart('Hunza Sun-Dried Apricots (1 Kg)', 1450)">
+<span class="material-symbols-outlined text-[15px]">add_shopping_cart</span>
+<span>Add</span>
+</button>
+<a aria-label="Direct WhatsApp Order" class="col-span-1 bg-surface-container-high text-primary rounded-lg flex items-center justify-center active:scale-95 transition-transform" href="https://wa.me/923000000000?text=I%20want%20to%20order%20Hunza%20Apricots" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 2: Karakoram Walnut Kernels -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col justify-between group">
+<div class="relative w-full aspect-[4/3] bg-surface-container">
+<img alt="Karakoram Walnut Kernels" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Premium pale golden walnut butterfly kernels Akhrot Giri neatly presented inside an authentic earthen Karakoram ceramic bowl, rustic wooden tabletop, natural crisp light highlighting crunchy walnut texture, small burlap sack in background, artisanal dry fruit packaging." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPsDuzUnfM3to3F1qFyoQXPgoFvW7yaexzwXDznemcYU8-DIsXk_wmOSN1GAGVKg1xJEockO8R1mjah19ZheImh7UJggSkYB_JyhhbIX3ti1IJzaeFJVcz-3R8Trwdo2jaf41K3hIUibxVZDUvPqq5McoXB8HU2JFX9945EVup41N_0j454V-THVUuHGJQo0mVEHsOWmk7CtHfV-t-PYyzyZRk_z6FR7FJo8dcUslZ0WUsGqPVX0fZ"/>
+<span class="absolute top-2 left-2 bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-1.5 py-0.5 rounded-full shadow-sm">
+            Batch 2024
+          </span>
+<button aria-label="Favorite" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-outline active:text-error transition-colors">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<div class="absolute bottom-1.5 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-1.5 py-0.5 rounded-md flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[12px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">4.8</span>
+<span class="font-body-sm text-body-sm text-outline">(94)</span>
+</div>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between gap-1.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">verified</span>
+<span class="font-label-sm text-label-sm text-primary truncate">Gilgit Dry Fruit Market</span>
+</div>
+<h4 class="font-headline-sm text-[14px] leading-snug text-on-surface line-clamp-2">
+              Karakoram Walnut Kernels (Akhrot Giri) 1 Kg
+            </h4>
+<div class="flex items-center gap-1">
+<span class="h-1.5 w-1.5 rounded-full bg-primary-fixed-variant"></span>
+<span class="font-label-sm text-label-sm text-primary font-medium">Vacuum Sealed Pack</span>
+</div>
+</div>
+<div class="pt-1 flex flex-col gap-2">
+<div class="flex items-baseline gap-1.5">
+<span class="font-currency-pkr text-currency-pkr text-primary">PKR 2,100</span>
+<span class="font-body-sm text-body-sm text-outline">/ kg</span>
+</div>
+<div class="grid grid-cols-4 gap-1">
+<button class="col-span-3 bg-primary text-on-primary py-1.5 px-2 rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 active:scale-95 transition-transform" onclick="addToCart('Karakoram Walnut Kernels 1 Kg', 2100)">
+<span class="material-symbols-outlined text-[15px]">add_shopping_cart</span>
+<span>Add</span>
+</button>
+<a aria-label="Direct WhatsApp Order" class="col-span-1 bg-surface-container-high text-primary rounded-lg flex items-center justify-center active:scale-95 transition-transform" href="https://wa.me/923000000000?text=I%20want%20to%20order%20Walnut%20Kernels" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 3: Handmade Woolen Pakol Cap -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col justify-between group">
+<div class="relative w-full aspect-[4/3] bg-surface-container">
+<img alt="Handmade Woolen Pakol" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Authentic traditional handmade Chitrali and Hunza woolen rolled pakol cap crafted from natural unbleached raw sheep wool, warm earthy beige tone, adorned with a delicate white bird feather badge, shot against traditional hand-knotted mountain rug texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC-cFC0viihoa6DTD9rFBgmwXCy8HmTm_MYDNUGGox5-VXHNNv2vuNo7_KM2HwaTDm0drIn1aUOEmoAas1zdghKkhtb_sGmXH83I44lo-GD44t251XVt3G7tujeo8nqURkvsH1uHo2Tz2n4n14yz4OzMI4v6vt08bkUvf-G9iX_GcMprzKxXlo-s0h04arZo32gBmCf7_k37uI7CkYpdm5pea7xSpGMHONShNR7jgM-ErvPE2iInPl"/>
+<span class="absolute top-2 left-2 bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-1.5 py-0.5 rounded-full shadow-sm">
+            Handspun
+          </span>
+<button aria-label="Favorite" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-outline active:text-error transition-colors">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<div class="absolute bottom-1.5 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-1.5 py-0.5 rounded-md flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[12px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">5.0</span>
+<span class="font-body-sm text-body-sm text-outline">(62)</span>
+</div>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between gap-1.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">verified</span>
+<span class="font-label-sm text-label-sm text-primary truncate">Chitral &amp; Nagar Guild</span>
+</div>
+<h4 class="font-headline-sm text-[14px] leading-snug text-on-surface line-clamp-2">
+              Authentic Handmade Chitrali/Hunza Woolen Pakol Cap
+            </h4>
+<div class="flex items-center gap-1">
+<span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">100% Pure Sheep Wool</span>
+</div>
+</div>
+<div class="pt-1 flex flex-col gap-2">
+<div class="flex items-baseline gap-1.5">
+<span class="font-currency-pkr text-currency-pkr text-primary">PKR 1,850</span>
+<span class="font-body-sm text-body-sm text-outline">Natural Beige</span>
+</div>
+<div class="grid grid-cols-4 gap-1">
+<button class="col-span-3 bg-primary text-on-primary py-1.5 px-2 rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 active:scale-95 transition-transform" onclick="addToCart('Authentic Woolen Pakol Cap', 1850)">
+<span class="material-symbols-outlined text-[15px]">add_shopping_cart</span>
+<span>Add</span>
+</button>
+<a aria-label="Direct WhatsApp Order" class="col-span-1 bg-surface-container-high text-primary rounded-lg flex items-center justify-center active:scale-95 transition-transform" href="https://wa.me/923000000000?text=I%20want%20to%20order%20Hunza%20Pakol" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 4: Mountain Blossom Honey -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col justify-between group">
+<div class="relative w-full aspect-[4/3] bg-surface-container">
+<img alt="Mountain Blossom Honey" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Artisanal glass jar of raw viscous golden amber mountain wildflower Sidr honey with honeycomb segment inside, sealed with brown kraft paper and raw twine cord, placed on alpine slate rock surrounded by tiny wild mountain flowers, warm morning sunlight backlighting honey clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzRC1qThBLjY5O0iypEVj0CcVMWpSABbsEtsUk6Ndz6AJGvY9YtvJp3N9DNnkY2Q3bZlLfp-tLOoPFGGWMNhACN6XJ-5-xZoB_G1voeVz2R3BzqaH9g9o74nQGHoJC8YXgSRC1m4sxTZ0ESQYsYgeqpzKPM902W2_dzV_7LWhs3lJL_JXG6L7lL2pNU6NIIxAwgdHodWfNL0y17OXOtYNiahdzjA-W12f0kA0Y0K-leuYfAn1PFvoP"/>
+<span class="absolute top-2 left-2 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-1.5 py-0.5 rounded-full shadow-sm">
+            Unpasteurized
+          </span>
+<button aria-label="Favorite" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-outline active:text-error transition-colors">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<div class="absolute bottom-1.5 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-1.5 py-0.5 rounded-md flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[12px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">4.9</span>
+<span class="font-body-sm text-body-sm text-outline">(81)</span>
+</div>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between gap-1.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">verified</span>
+<span class="font-label-sm text-label-sm text-primary truncate">Deosai Apiaries</span>
+</div>
+<h4 class="font-headline-sm text-[14px] leading-snug text-on-surface line-clamp-2">
+              Raw Mountain Blossom Honey (Sidr &amp; Berry) 500g
+            </h4>
+<div class="flex items-center gap-1">
+<span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary">High Altitude Flora</span>
+</div>
+</div>
+<div class="pt-1 flex flex-col gap-2">
+<div class="flex items-baseline gap-1.5">
+<span class="font-currency-pkr text-currency-pkr text-primary">PKR 2,200</span>
+<span class="font-body-sm text-body-sm text-outline">500g Glass Jar</span>
+</div>
+<div class="grid grid-cols-4 gap-1">
+<button class="col-span-3 bg-primary text-on-primary py-1.5 px-2 rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 active:scale-95 transition-transform" onclick="addToCart('Raw Mountain Blossom Honey 500g', 2200)">
+<span class="material-symbols-outlined text-[15px]">add_shopping_cart</span>
+<span>Add</span>
+</button>
+<a aria-label="Direct WhatsApp Order" class="col-span-1 bg-surface-container-high text-primary rounded-lg flex items-center justify-center active:scale-95 transition-transform" href="https://wa.me/923000000000?text=I%20want%20to%20order%20Mountain%20Honey" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 5: Skardu Aquamarine Pendant -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col justify-between group">
+<div class="relative w-full aspect-[4/3] bg-surface-container">
+<img alt="Skardu Aquamarine Pendant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Raw glowing crystalline sky-blue natural aquamarine crystal specimen pendant wrapped in delicate hand-hammered 925 sterling silver filigree, resting on smooth dark grey Shigar river stone, macro jewelry photography showcasing ice blue crystal facets and artisanal metalwork." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj-TK36o0sHNV7B3h1TrxClaefGoPaIZ22VRQx_s2Lwm2LxhqbSWLVScDLAEmmz1yNRR7LIvB5FDeU7dJY-VCHAfMBLd2RyPTKheWDuMtd9rGIEoNYuAmVCNSfZ3i6EYmaybo5FoErpAmQ8akmsj2xA_W3DJ4LWuRDnRRFnW2GBDjezeWWFxqM0oPMB0MVvlKSUH4ZU3PsFUNbHQwT06YgSdXZhf_00n5m8XDCmZ_EFEU0u7G6SnUl"/>
+<span class="absolute top-2 left-2 bg-tertiary text-on-tertiary font-label-sm text-label-sm px-1.5 py-0.5 rounded-full shadow-sm">
+            Certified Gem
+          </span>
+<button aria-label="Favorite" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-outline active:text-error transition-colors">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<div class="absolute bottom-1.5 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-1.5 py-0.5 rounded-md flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[12px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">5.0</span>
+<span class="font-body-sm text-body-sm text-outline">(19)</span>
+</div>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between gap-1.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">verified</span>
+<span class="font-label-sm text-label-sm text-primary truncate">Shigar Gems &amp; Minerals</span>
+</div>
+<h4 class="font-headline-sm text-[14px] leading-snug text-on-surface line-clamp-2">
+              Skardu Aquamarine Raw Gemstone Pendant
+            </h4>
+<div class="flex items-center gap-1">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-tertiary">Natural Unheated • 925 Silver</span>
+</div>
+</div>
+<div class="pt-1 flex flex-col gap-2">
+<div class="flex items-baseline gap-1.5">
+<span class="font-currency-pkr text-currency-pkr text-primary">PKR 6,500</span>
+<span class="font-body-sm text-body-sm text-outline">Unique</span>
+</div>
+<div class="grid grid-cols-4 gap-1">
+<button class="col-span-3 bg-primary text-on-primary py-1.5 px-2 rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 active:scale-95 transition-transform" onclick="addToCart('Skardu Aquamarine Pendant', 6500)">
+<span class="material-symbols-outlined text-[15px]">add_shopping_cart</span>
+<span>Add</span>
+</button>
+<a aria-label="Direct WhatsApp Order" class="col-span-1 bg-surface-container-high text-primary rounded-lg flex items-center justify-center active:scale-95 transition-transform" href="https://wa.me/923000000000?text=I%20want%20to%20inquire%20about%20Skardu%20Aquamarine" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 6: Cold Resistant Power Bank -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col justify-between group">
+<div class="relative w-full aspect-[4/3] bg-surface-container">
+<img alt="Cold Resistant Power Bank" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Rugged matte forest green heavy-duty outdoor power bank featuring rubberized shock bumpers, integrated camping lantern light on, resting beside a mountaineering backpack and carabiners on granite mountain rock, cold atmospheric mountain mist in background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDER9GK0_oq-mFNyL1K27JsEI3G-qx6FWy_D3wmJPXM8D6IHvcM2DfupbyIMCkTFeWdkoDJLLRIkADq6OFrJdz7z3LOX-UWzgOGjLjQkF5lInl1a6Y1msUrFKrtOhfIZqH9Uy5Stk9uuXGOuV1pLUKRYfGn1LYLAUjOmNLWRy-QMm8RJUBqJH1Sh6snGg0exedfYvj8_5X77cdHr6_GswNsxmUJvKlR2oi8qwuECvHBXQFX00SGKw96"/>
+<span class="absolute top-2 left-2 bg-surface-dim text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded-full shadow-sm">
+            -20°C Certified
+          </span>
+<button aria-label="Favorite" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-outline active:text-error transition-colors">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<div class="absolute bottom-1.5 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-1.5 py-0.5 rounded-md flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[12px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">4.7</span>
+<span class="font-body-sm text-body-sm text-outline">(45)</span>
+</div>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between gap-1.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">verified</span>
+<span class="font-label-sm text-label-sm text-primary truncate">Karakoram Trek &amp; Tech</span>
+</div>
+<h4 class="font-headline-sm text-[14px] leading-snug text-on-surface line-clamp-2">
+              20000mAh Power Bank (Cold Camping Tech)
+            </h4>
+<div class="flex items-center gap-1">
+<span class="h-1.5 w-1.5 rounded-full bg-primary-fixed-variant"></span>
+<span class="font-label-sm text-label-sm text-outline">Fast 65W PD • Flashlight</span>
+</div>
+</div>
+<div class="pt-1 flex flex-col gap-2">
+<div class="flex items-baseline gap-1.5">
+<span class="font-currency-pkr text-currency-pkr text-primary">PKR 4,800</span>
+<span class="font-body-sm text-body-sm text-outline">Warranty</span>
+</div>
+<div class="grid grid-cols-4 gap-1">
+<button class="col-span-3 bg-primary text-on-primary py-1.5 px-2 rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 active:scale-95 transition-transform" onclick="addToCart('20000mAh Cold Resistant Power Bank', 4800)">
+<span class="material-symbols-outlined text-[15px]">add_shopping_cart</span>
+<span>Add</span>
+</button>
+<a aria-label="Direct WhatsApp Order" class="col-span-1 bg-surface-container-high text-primary rounded-lg flex items-center justify-center active:scale-95 transition-transform" href="https://wa.me/923000000000?text=I%20want%20to%20order%20Camp%20PowerBank" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Sticky Delightful Cart Bottom Bar (Docked right above tab navigation) -->
+<div class="fixed bottom-16 left-0 right-0 z-40 px-margin pb-2 transition-transform duration-300" id="cart-bar">
+<div class="bg-inverse-surface text-inverse-on-surface rounded-2xl p-space-sm shadow-xl flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs pl-1">
+<div class="relative w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-secondary-container text-on-secondary-container font-label-sm text-[11px] w-5 h-5 rounded-full flex items-center justify-center font-bold" id="cart-count-badge">2</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-inverse-on-surface font-semibold" id="cart-item-count">2 items</span>
+<span class="text-outline text-xs">•</span>
+<span class="font-label-sm text-label-sm text-inverse-primary">Free Local Pick</span>
+</div>
+<span class="font-currency-pkr text-[17px] text-inverse-on-surface font-extrabold tracking-tight" id="cart-total-price">PKR 3,550</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="bg-primary hover:bg-primary-container text-on-primary px-4 py-2.5 rounded-xl font-label-lg text-label-lg flex items-center gap-1.5 shadow-md active:scale-95 transition-transform" id="view-cart-btn" onclick="openCheckoutNotice()">
+<span>Checkout</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Toast Notification System for Cart Delight -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-2 rounded-full font-label-md text-label-md shadow-lg flex items-center gap-2 opacity-0 pointer-events-none transition-all duration-300" id="toast">
+<span class="material-symbols-outlined text-inverse-primary text-[18px]">check_circle</span>
+<span id="toast-text">Added to Cart!</span>
+</div>
+</div>
+<script>
+  let cart = {
+    count: 2,
+    total: 3550
+  };
+
+  function addToCart(title, price) {
+    cart.count += 1;
+    cart.total += price;
+    updateCartUI();
+    showToast(`Added ${title.split(' ')[0]} to cart!`);
+    
+    // Tactile micro-bounce on cart badge
+    const badge = document.getElementById('cart-count-badge');
+    badge.classList.add('scale-125');
+    setTimeout(() => badge.classList.remove('scale-125'), 200);
+  }
+
+  function updateCartUI() {
+    document.getElementById('cart-count-badge').textContent = cart.count;
+    document.getElementById('cart-item-count').textContent = `${cart.count} items`;
+    document.getElementById('cart-total-price').textContent = `PKR ${cart.total.toLocaleString()}`;
+  }
+
+  function showToast(message) {
+    const toast = document.getElementById('toast');
+    const toastText = document.getElementById('toast-text');
+    toastText.textContent = message;
+    toast.classList.remove('opacity-0', 'pointer-events-none');
+    toast.classList.add('opacity-100', 'translate-y-2');
+    
+    setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-2');
+      toast.classList.add('opacity-0', 'pointer-events-none');
+    }, 2200);
+  }
+
+  function openCheckoutNotice() {
+    showToast(`Preparing checkout for PKR ${cart.total.toLocaleString()}...`);
+  }
+
+  // Category chip toggle micro-interaction
+  const chips = document.querySelectorAll('.category-chip');
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => {
+        c.classList.remove('bg-primary', 'text-on-primary');
+        c.classList.add('bg-surface-container-lowest', 'text-on-surface');
+      });
+      chip.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+      chip.classList.add('bg-primary', 'text-on-primary');
+    });
+  });
+
+  // Client search filtering mockup
+  const searchInput = document.getElementById('market-search');
+  searchInput.addEventListener('input', (e) => {
+    const val = e.target.value.toLowerCase();
+    const articles = document.querySelectorAll('#product-grid article');
+    articles.forEach(art => {
+      const text = art.textContent.toLowerCase();
+      art.style.display = text.includes(val) ? 'flex' : 'none';
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-label-lg"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="travel" href="#"><span class="material-symbols-outlined text-[22px]">directions_car</span><span class="font-label-sm text-label-sm">Travel</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="hotels" href="#"><span class="material-symbols-outlined text-[22px]">hotel</span><span class="font-label-sm text-label-sm">Hotels</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] transition-colors text-primary font-label-lg" data-path="shop" href="#"><span class="material-symbols-outlined text-[22px]">storefront</span><span class="font-label-sm text-label-sm">Shop</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="services" href="#"><span class="material-symbols-outlined text-[22px]">handyman</span><span class="font-label-sm text-label-sm">Services</span></a></div></nav></body></html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#faf8ff", "on-primary-fixed-variant": "#00513b", "on-surface-variant": "#3f4944", "surface-container-lowest": "#ffffff", "primary-fixed": "#a6f2d1", "surface": "#faf8ff", "surface-container-high": "#e2e7ff", "on-primary": "#ffffff", "secondary": "#904d00", "on-tertiary-fixed-variant": "#004b73", "tertiary-fixed-dim": "#93ccff", "primary": "#004532", "inverse-on-surface": "#eef0ff", "secondary-fixed-dim": "#ffb77d", "surface-variant": "#dae2fd", "tertiary": "#004063", "on-primary-fixed": "#002116", "on-secondary-fixed-variant": "#6e3900", "surface-container-low": "#f2f3ff", "error-container": "#ffdad6", "on-background": "#131b2e", "surface-container-highest": "#dae2fd", "inverse-primary": "#8bd6b6", "error": "#ba1a1a", "primary-container": "#065f46", "outline": "#6f7973", "tertiary-container": "#005887", "secondary-container": "#fe932c", "tertiary-fixed": "#cce5ff", "on-secondary-fixed": "#2f1500", "on-tertiary-fixed": "#001d31", "on-tertiary-container": "#95cdff", "on-secondary": "#ffffff", "outline-variant": "#bec9c2", "on-error-container": "#93000a", "on-surface": "#131b2e", "surface-dim": "#d2d9f4", "on-error": "#ffffff", "background": "#faf8ff", "surface-tint": "#1b6b51", "inverse-surface": "#283044", "primary-fixed-dim": "#8bd6b6", "on-secondary-container": "#663500", "on-tertiary": "#ffffff", "on-primary-container": "#8bd6b7", "surface-container": "#eaedff", "secondary-fixed": "#ffdcc3" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1rem", "gutter-desktop": "1.5rem", "space-2xs": "0.125rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-xl": "2rem", "space-md": "1rem", "margin-desktop": "2rem", "space-2xl": "3rem", "space-lg": "1.5rem", "gutter": "1rem" }, "fontFamily": { "headline-lg": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"], "label-lg": ["Plus Jakarta Sans"], "currency-pkr": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "body-sm": ["Inter"], "label-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"] }, "fontSize": { "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "700" }], "currency-pkr": ["16px", { "lineHeight": "20px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "700" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="GB One Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WDHrQC9Y1-4UeZ_lqj8t17--erpPR6yG2G0CD5zRb79Lk6CgwvESznZ5PTlIlcxXSU50nImnkyCdJp7fxkh05otAZEfcQav4JaNT2R4RLKtGIVF6v8fW8EYKuX38_e6pvqBn6MkBQwNflTyjsv6Te9FJ6jsrEQioCGtK-NgQyCTmxeD90VWzwW6IZ8nl3EMa9MpjrkUsqt4hVE3NjmQtos1iHvMudjDLS2sNQ0k5x6BV9p6jiP9QB_2g"/><span class="font-headline-sm text-headline-sm text-primary hidden sm:inline">GB One</span></div><div class="flex flex-col items-center justify-center"><div class="flex items-center gap-space-2xs bg-surface-container-low px-space-sm py-space-2xs rounded-full"><span class="material-symbols-outlined text-primary text-[14px]">location_on</span><span class="font-label-sm text-label-sm text-on-surface">Hunza &amp; Gilgit</span><span class="material-symbols-outlined text-outline text-[12px]">expand_more</span></div><span class="font-label-sm text-label-sm text-outline mt-0.5">Home</span></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">notifications</span></button><div class="w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHZlfIfvo_ZKfpUDNHVIGTwJ7cOmrdRBnawDjmHO5Ta8pd2GllPDG1tJtbQKkGPFLkiKLD0P1jeIUm_6a8UBgJE540_DEUatYpdqD-MU9TYyZg1THVHkyNLpOuJOywdVXD9LPhPezJBp7nV0k_6hJ9iGih4ym3GQqoTBGqtvgoGkFQPbYj3AjNgelZOPUCVkK6zb43d_xG92MYxoVnhmmiNlwpnikrIBO1HqYz97tZGhOzjT94HEKP"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full pb-10 space-y-6">
+<!-- 1. Universal Search & Regional Filter Ribbon -->
+<section class="px-margin pt-2 flex flex-col gap-space-sm">
+<!-- Search Pill -->
+<div class="relative w-full flex items-center bg-surface-container-lowest shadow-sm rounded-full p-1.5 focus-within:shadow-md transition-shadow">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0 ml-1">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full bg-transparent px-3 text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none" placeholder="Hotels, 4x4 jeeps, dry fruits, guides..." type="text"/>
+<button class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors mr-1 shrink-0">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+<!-- Quick Location Ribbon -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1 -mx-margin px-margin">
+<button class="shrink-0 flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>All GB</span>
+</button>
+<button class="shrink-0 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-sm hover:bg-surface-container transition-all active:scale-95">
+        Hunza Valley
+      </button>
+<button class="shrink-0 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-sm hover:bg-surface-container transition-all active:scale-95">
+        Skardu
+      </button>
+<button class="shrink-0 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-sm hover:bg-surface-container transition-all active:scale-95">
+        Gilgit City
+      </button>
+<button class="shrink-0 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-sm hover:bg-surface-container transition-all active:scale-95">
+        Ghizer
+      </button>
+<button class="shrink-0 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-sm hover:bg-surface-container transition-all active:scale-95">
+        Astore
+      </button>
+<button class="shrink-0 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-sm hover:bg-surface-container transition-all active:scale-95">
+        Nagar
+      </button>
+</div>
+</section>
+<!-- 2. Hero Promo Banner: Alpine Visual Storytelling -->
+<section class="px-margin">
+<div class="relative w-full rounded-2xl overflow-hidden shadow-md bg-inverse-surface min-h-[210px] flex flex-col justify-end p-5">
+<!-- Background Scenic Image with Prompt -->
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Cinematic high altitude landscape of majestic Karakoram snow-capped peaks against crisp turquoise blue alpine sky, lush Hunza terraced valley at the base, warm morning sunlight hitting the mountain wall, hyper-realistic, vivid and pristine." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCYgKaI68VA0_3DMiocGa8LvJddwSM_CKZAZ6S2wweFoDQS6eXPLTzvKOBb-ySgZHBEDtslSZ8uIersqLml698H2kbHTqJ8F-YhDA-2DRf2GkjTGPHfvhwEBu8XPHsTCBlqUl0tjfyUlUjAklruyOd6AgorN0RFFcDTYcucr8cTpVefan4OZIhplb5pVU0az4AAARTaNqo6oKyXRnGdC4_VmPZvM9B6Y9IZbdzgmjnTRa_7F6j-bJCQ')">
+</div>
+<!-- Dual Scrim Overlays for legibility -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container via-primary/60 to-transparent"></div>
+<!-- Content Stack -->
+<div class="relative z-10 flex flex-col items-start gap-1">
+<div class="flex items-center gap-1.5 bg-secondary-container/90 backdrop-blur-md px-2.5 py-1 rounded-full text-on-secondary-container">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide">सब कुछ एक ही जगह</span>
+</div>
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-on-primary leading-tight mt-1">
+          Karakoram &amp; Himalayas
+        </h2>
+<p class="font-body-sm text-body-sm text-inverse-on-surface line-clamp-1">
+          Travel, handpicked stays, dry fruits &amp; vetted local guides.
+        </p>
+<div class="mt-3 flex items-center gap-2 w-full">
+<button class="px-5 py-2.5 bg-primary-fixed text-on-primary-fixed font-label-lg text-label-lg rounded-xl shadow-sm hover:bg-surface-container-lowest transition-colors flex items-center gap-1.5 active:scale-95">
+<span>Explore Now</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<div class="flex items-center gap-1 px-3 py-2 rounded-xl bg-surface-container-lowest/20 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary-fixed">wb_sunny</span>
+<span>Hunza 18°C Clear</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Four Core Ecosystem Pillars (2x2 Grid) -->
+<section class="px-margin flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Explore GB One</h3>
+<span class="font-label-sm text-label-sm text-primary flex items-center">
+        4 Services
+      </span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- 1. Travel & 4x4 -->
+<div class="bg-surface-container-lowest p-4 rounded-2xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow active:scale-[0.98] cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">directions_car</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-primary mt-1"></span>
+</div>
+<div class="mt-4">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Travel &amp; 4x4</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">
+            Deosai safaris, Hiace &amp; rugged jeep hire.
+          </p>
+</div>
+</div>
+<!-- 2. Scenic Stays -->
+<div class="bg-surface-container-lowest p-4 rounded-2xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow active:scale-[0.98] cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[26px]">hotel</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-secondary-container mt-1"></span>
+</div>
+<div class="mt-4">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Hotels &amp; Huts</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">
+            Riverfront glamping, suites &amp; alpine huts.
+          </p>
+</div>
+</div>
+<!-- 3. Local Market -->
+<div class="bg-surface-container-lowest p-4 rounded-2xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow active:scale-[0.98] cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">shopping_basket</span>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary/10 text-secondary px-1.5 py-0.5 rounded">Fresh</span>
+</div>
+<div class="mt-4">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">GB Bazaar</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">
+            Organic dry fruits, honey, Pakols &amp; gems.
+          </p>
+</div>
+</div>
+<!-- 4. Community Services -->
+<div class="bg-surface-container-lowest p-4 rounded-2xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow active:scale-[0.98] cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">handyman</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+</div>
+<div class="mt-4">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Local Pros</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">
+            Mechanics, plumbers, K2 guides &amp; medics.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Trending Travel Routes & 4x4 Jeep Rentals -->
+<section class="flex flex-col gap-3">
+<div class="px-margin flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Trending Routes &amp; 4x4s</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Guaranteed seats &amp; experienced mountain drivers</p>
+</div>
+<a class="font-label-md text-label-md text-primary flex items-center gap-0.5" href="#">
+        See all
+        <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Horizontal scroll cards -->
+<div class="flex gap-3 overflow-x-auto no-scrollbar px-margin py-1">
+<!-- Card 1: Coaster / Executive Hiace -->
+<div class="min-w-[280px] max-w-[280px] bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden flex flex-col shrink-0">
+<div class="relative h-36 w-full">
+<div class="w-full h-full bg-cover bg-center" data-alt="Modern executive passenger coaster van driving smoothly on the scenic Karakoram Highway surrounded by dramatic towering cliffs and emerald Gilgit river waters, bright midday lighting, sharp focus." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCH9mFPqpBJwm9m6fIr_37lcjkw5ULqv34TzFOlSwonTNfqE4J7KKVBoq5zgNmRuu3EJ7wiJqWrfBO-_Ae36JNycsxTZfX1nvzXbVHeOX7vl_wjBDx-29mMjLNoOZbrV-GjcsuFKSaLrluVXZ7BD3eeR09qhyRG_d9uBu-zrdL-1rhxNSwOC7Fpt3-YD1QckUVJXb1SbwiFz8m9G9iRCtYAqtxdbbdpwgHHmeixa-Q4bEZJREZNn_s6')">
+</div>
+<div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">schedule</span>
+<span>Daily 7:00 AM</span>
+</div>
+<div class="absolute bottom-2.5 left-2.5 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest/90 backdrop-blur-sm text-on-surface text-label-sm font-label-sm">AC &amp; Wi-Fi</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest/90 backdrop-blur-sm text-on-surface text-label-sm font-label-sm">Executive</span>
+</div>
+</div>
+<div class="p-3.5 flex flex-col flex-1 justify-between gap-3">
+<div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Islamabad</span>
+<span class="material-symbols-outlined text-[14px]">trending_flat</span>
+<span>Hunza / Aliabad</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Executive Hiace Transit</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Includes Karakoram Highway stops &amp; tea</p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div>
+<span class="font-currency-pkr text-currency-pkr text-primary">PKR 4,500</span>
+<span class="font-body-sm text-body-sm text-outline">/ seat</span>
+</div>
+<button class="px-3 py-1.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary-container transition-colors active:scale-95">
+              Book Seat
+            </button>
+</div>
+</div>
+</div>
+<!-- Card 2: 4x4 Deosai Safari -->
+<div class="min-w-[280px] max-w-[280px] bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden flex flex-col shrink-0">
+<div class="relative h-36 w-full">
+<div class="w-full h-full bg-cover bg-center" data-alt="Rugged 4x4 Toyota Land Cruiser parked near the crystal clear Sheosar Lake in Deosai National Park with purple wildflower plateau and distant snow peaks, adventurous mountain travel scene." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAGcJ3FjMErXoPZi1tON_ygqFBPut79nKCC9PEx750Pr49aP67Dy8hgMAZyAMXBQmnqGnqRGzLQ6iF0-8in85XBb95IEu9pmUOwADKxy7cSkLrus4KvwX49LYDGtuvNgKZYttxs3uyFy7DByaAr-lT-qpGmGUikCAjTuISeo0SCE6_DZnTRHhM-1-IV8b6wFNIfVrfpPTmrjIrvksVhCTU7SGjDleiN2beSJv95_BZVaY5pSqqFsM9e')">
+</div>
+<div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">local_fire_department</span>
+<span>Popular Route</span>
+</div>
+<div class="absolute bottom-2.5 left-2.5 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest/90 backdrop-blur-sm text-on-surface text-label-sm font-label-sm">Includes Driver</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest/90 backdrop-blur-sm text-on-surface text-label-sm font-label-sm">7 Seater</span>
+</div>
+</div>
+<div class="p-3.5 flex flex-col flex-1 justify-between gap-3">
+<div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Skardu</span>
+<span class="material-symbols-outlined text-[14px]">arrow_right_alt</span>
+<span>Deosai Plateau &amp; Plains</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Land Cruiser 4x4 Safari</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Vetted mountain driver, fuel package optional</p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div>
+<span class="font-currency-pkr text-currency-pkr text-primary">PKR 18,000</span>
+<span class="font-body-sm text-body-sm text-outline">/ day</span>
+</div>
+<button class="px-3 py-1.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary-container transition-colors active:scale-95">
+              Rent 4x4
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Featured Scenic Stays -->
+<section class="px-margin flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Handpicked Stays</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Heated glamping domes &amp; heritage hotels</p>
+</div>
+<a class="font-label-md text-label-md text-primary flex items-center gap-0.5" href="#">
+        Explore
+        <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Stay Item 1: Glamping Attabad -->
+<div class="bg-surface-container-lowest rounded-2xl p-3 shadow-sm flex gap-3 hover:shadow-md transition-shadow">
+<div class="relative w-28 h-28 shrink-0 rounded-xl overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Luxury geo-dome glamping pod set directly on the edge of the vibrant azure turquoise waters of Attabad Lake Hunza, stylish wooden deck with outdoor seating, jagged rocky cliffs in background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDllojAEzphWOHgfHyin0_UzDS-yVAiMg9NUm2O-EzsWJOjAME1T9XB3VyUb1XT6POdJBBPYGUm7jnALySYk1OXiZKmQy894nwlv2XQjYlQFSueHfYB03C116psuZ43wbPk8KZW_ad4lFB0Y8hw8ko2hQtpcenVbSdMDTO1GaFY6y_s6R4kEuVFKTg1L5-NLltZxoj2G39JZFlrmzBcoo4JC_jgCEPX7tA6TOgoh586HgebMb9Zzuws')">
+</div>
+<div class="absolute bottom-1.5 left-1.5 bg-surface-container-lowest/90 px-1.5 py-0.5 rounded text-[11px] font-bold text-on-surface flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9</span>
+</div>
+</div>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div>
+<div class="flex items-center gap-1 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">location_on</span>
+<span class="truncate">Attabad Lake, Gojal</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate mt-0.5">Attabad Lake Glamping Pods</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-body-sm font-body-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary">fireplace</span> Heated
+              </span>
+<span class="text-body-sm font-body-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary">wifi</span> Free Wi-Fi
+              </span>
+</div>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<div>
+<span class="font-currency-pkr text-currency-pkr text-primary">PKR 14,000</span>
+<span class="font-body-sm text-body-sm text-outline">/ night</span>
+</div>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container-low text-primary font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-colors">
+              Details
+            </button>
+</div>
+</div>
+</div>
+<!-- Stay Item 2: Serena Gilgit -->
+<div class="bg-surface-container-lowest rounded-2xl p-3 shadow-sm flex gap-3 hover:shadow-md transition-shadow">
+<div class="relative w-28 h-28 shrink-0 rounded-xl overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Traditional stone and carved timber heritage luxury hotel room balcony overlooking serene alpine apple orchards in Gilgit, snow-peaked Rakaposhi view in background, morning light." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBRSue9NjCzYFR4xYVcVJ2cvykWF2luQm6Wi_IMirE2CAVOjux_HfC0nG3TwtRunfrm5x_NrT_kFu-zm4AXXJn4ggpww_2Qm-TFq8hBm_zvKgdhmE3W53KiHIutro5vwJV-z6RMq1ufhn1PqFaB93i8bcnQtNA4N2ukB-af9S6jWyACyqZzwPOL1smnALVEOEOYEyxirUsMRGHdczlR6hq4NLhmHadnE5b3H3WPEIVVPeGRNUuPHdTt')">
+</div>
+<div class="absolute bottom-1.5 left-1.5 bg-surface-container-lowest/90 px-1.5 py-0.5 rounded text-[11px] font-bold text-on-surface flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.8</span>
+</div>
+</div>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div>
+<div class="flex items-center gap-1 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">location_on</span>
+<span class="truncate">Gilgit City Center</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate mt-0.5">Serena Gilgit Heritage Suite</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-body-sm font-body-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary">restaurant</span> Breakfast
+              </span>
+<span class="text-body-sm font-body-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary">spa</span> Garden
+              </span>
+</div>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<div>
+<span class="font-currency-pkr text-currency-pkr text-primary">PKR 22,000</span>
+<span class="font-body-sm text-body-sm text-outline">/ night</span>
+</div>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container-low text-primary font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-colors">
+              Details
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Authentic GB Organic & Artisan Products -->
+<section class="px-margin flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Pure Gilgit-Baltistan Produce</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Direct from valley farmers &amp; master weavers</p>
+</div>
+<a class="font-label-md text-label-md text-primary flex items-center gap-0.5" href="#">
+        Shop all
+        <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Product 1: Apricots & Walnuts -->
+<div class="bg-surface-container-lowest rounded-2xl p-3 shadow-sm flex flex-col justify-between">
+<div>
+<div class="relative w-full h-32 rounded-xl overflow-hidden mb-2">
+<div class="w-full h-full bg-cover bg-center" data-alt="Overhead artisanal shot of dried golden Hunza apricots and cracked paper-shell walnuts displayed in rustic handwoven wicker bowl on dark slate wood, bright crisp daylight." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAHVGZMgmdeOOyl6W4dyXTq-d04hjWynPW3JMtuPBPctYwa1Tv8SwaoLQc6EmCA38UDZ5pxYm0q_vhKhyZoJUcqjnpa14R_vrxLslF9okNXrgbKnDttGe13KOQ-IHMJba7BwTJziprJP6s2uP2wDR2t0mQsb30hs8jFAZkvAaSHoIcNTW7RuQ7t0wlKCjAPVUzSUBt38XJn-V9pX_Fs4PCBJcGFzGVwAnNMiN9bFPWYL_fr7ego0dmQ')">
+</div>
+<span class="absolute top-2 left-2 bg-primary text-on-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full">
+              Organic
+            </span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface line-clamp-1">Hunza Walnuts &amp; Apricots</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">1kg sealed harvest pack</p>
+</div>
+<div class="mt-3 flex items-center justify-between pt-2">
+<div>
+<span class="font-currency-pkr text-currency-pkr text-primary">PKR 1,650</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-low hover:bg-primary hover:text-on-primary flex items-center justify-center text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<!-- Product 2: Pakol & Wool Shawl -->
+<div class="bg-surface-container-lowest rounded-2xl p-3 shadow-sm flex flex-col justify-between">
+<div>
+<div class="relative w-full h-32 rounded-xl overflow-hidden mb-2">
+<div class="w-full h-full bg-cover bg-center" data-alt="Handcrafted woolen Hunza pakol cap and rich earthy embroidered pashmina shawl folded neatly beside antique brass needlework, traditional Gilgit Baltistan craft heritage." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBYiTLoCpeANO6oIKROZY9MpqOpS4REszB5B7KtoTqfyabepQEtnlHHlFMMOxtXXWZxbLhd2ECFa9ZWvcUsuOciuhKojEuB6Ez_HnjSspPsfZejfs-bQB_bXE7SvGfIdEH3rgrzTXFl18XhrCW9yU6b_LmjtN7CDve9c2R-1BvMc2jG6B1xZd9qm_7czbcbG7-B1GTItxOXsa_JW_Y8w7ULn4Qbj990soSgXpZTpvpRNxdn4RndfkEc')">
+</div>
+<span class="absolute top-2 left-2 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full">
+              Artisan
+            </span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface line-clamp-1">Pure Woolen Pakol &amp; Shawl</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Natural sheep wool weave</p>
+</div>
+<div class="mt-3 flex items-center justify-between pt-2">
+<div>
+<span class="font-currency-pkr text-currency-pkr text-primary">PKR 3,200</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-low hover:bg-primary hover:text-on-primary flex items-center justify-center text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Verified Local Experts (On-Demand Help) -->
+<section class="px-margin flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Verified Local Experts</h3>
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Immediate roadside help, electricians &amp; K2 guides</p>
+</div>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- Expert 1: Mechanic -->
+<div class="bg-surface-container-lowest p-3 rounded-2xl shadow-sm flex items-center justify-between gap-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative shrink-0">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary overflow-hidden">
+<span class="material-symbols-outlined text-[24px]">car_repair</span>
+</div>
+<span class="absolute -bottom-0.5 -right-0.5 bg-primary text-on-primary rounded-full p-0.5 text-[10px]">
+<span class="material-symbols-outlined text-[10px]">verified</span>
+</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<h5 class="font-label-lg text-label-lg text-on-surface truncate">Juglot 4x4 Roadside Rescue</h5>
+<span class="px-1.5 py-0.2 bg-primary/10 text-primary font-label-sm text-label-sm rounded">24/7</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Brake, engine, &amp; towing support on KKH</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<a class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-primary transition-colors" href="tel:1122">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</a>
+<button class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+</div>
+</div>
+<!-- Expert 2: Mountain Guide -->
+<div class="bg-surface-container-lowest p-3 rounded-2xl shadow-sm flex items-center justify-between gap-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative shrink-0">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary overflow-hidden">
+<span class="material-symbols-outlined text-[24px]">hiking</span>
+</div>
+<span class="absolute -bottom-0.5 -right-0.5 bg-primary text-on-primary rounded-full p-0.5 text-[10px]">
+<span class="material-symbols-outlined text-[10px]">verified</span>
+</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<h5 class="font-label-lg text-label-lg text-on-surface truncate">Rashid Balti • K2 Trek Lead</h5>
+<span class="px-1.5 py-0.2 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded">Licensed</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">High altitude guide • Baltoro &amp; Concordia</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<a class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-primary transition-colors" href="tel:1122">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</a>
+<button class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+</div>
+</div>
+<!-- Expert 3: Electrician / Solar Tech -->
+<div class="bg-surface-container-lowest p-3 rounded-2xl shadow-sm flex items-center justify-between gap-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative shrink-0">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-tertiary overflow-hidden">
+<span class="material-symbols-outlined text-[24px]">bolt</span>
+</div>
+<span class="absolute -bottom-0.5 -right-0.5 bg-primary text-on-primary rounded-full p-0.5 text-[10px]">
+<span class="material-symbols-outlined text-[10px]">verified</span>
+</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<h5 class="font-label-lg text-label-lg text-on-surface truncate">Karim Electric &amp; Solar</h5>
+<span class="px-1.5 py-0.2 bg-primary/10 text-primary font-label-sm text-label-sm rounded">Gilgit City</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Inverter, wiring &amp; emergency backup</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<a class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-primary transition-colors" href="tel:1122">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</a>
+<button class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Trust & Local Verification Badges Footer Bar -->
+<section class="px-margin pt-1">
+<div class="bg-primary/5 rounded-2xl p-4 flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">shield</span>
+<h4 class="font-label-lg text-label-lg text-primary">The GB One Guarantee</h4>
+</div>
+<div class="grid grid-cols-3 gap-2 text-center">
+<div class="flex flex-col items-center gap-1 p-2 bg-surface-container-lowest rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface leading-tight">100% Vetted GB Providers</span>
+</div>
+<div class="flex flex-col items-center gap-1 p-2 bg-surface-container-lowest rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">handshake</span>
+<span class="font-label-sm text-label-sm text-on-surface leading-tight">Direct Local Contact</span>
+</div>
+<div class="flex flex-col items-center gap-1 p-2 bg-surface-container-lowest rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">price_check</span>
+<span class="font-label-sm text-label-sm text-on-surface leading-tight">Zero Hidden Commission</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple interaction handler for category pills
+  document.querySelectorAll('section button').forEach(button => {
+    button.addEventListener('click', function() {
+      // Toggle ripple or active visual state without overriding Tailwind config
+      this.classList.add('opacity-80');
+      setTimeout(() => this.classList.remove('opacity-80'), 150);
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-label-lg"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] transition-colors text-primary font-label-lg" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="travel" href="#"><span class="material-symbols-outlined text-[22px]">directions_car</span><span class="font-label-sm text-label-sm">Travel</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="hotels" href="#"><span class="material-symbols-outlined text-[22px]">hotel</span><span class="font-label-sm text-label-sm">Hotels</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="shop" href="#"><span class="material-symbols-outlined text-[22px]">storefront</span><span class="font-label-sm text-label-sm">Shop</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors hover:text-primary" data-path="services" href="#"><span class="material-symbols-outlined text-[22px]">handyman</span><span class="font-label-sm text-label-sm">Services</span></a></div></nav></body></html>
