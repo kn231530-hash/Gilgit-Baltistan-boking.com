@@ -754,7 +754,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
               <span className="material-symbols-outlined text-[18px] text-primary">translate</span>
               Language Setting
             </span>
-            <span className="font-bold text-on-surface">English / اردو</span>
+            <span className="font-bold text-primary bg-primary/10 px-2 py-0.5 rounded">English (Active)</span>
           </div>
         </div>
 

@@ -143,7 +143,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             <div className="flex items-center gap-1.5 bg-secondary-container/90 backdrop-blur-md px-2.5 py-1 rounded-full text-on-secondary-container shadow-xs">
               <span className="material-symbols-outlined text-[14px]">auto_awesome</span>
               <span className="font-label-sm text-[11px] font-bold uppercase tracking-wide">
-                सब कुछ एक ही जगह
+                ALL IN ONE PLACE
               </span>
             </div>
             <h2 className="font-display-lg-mobile text-2xl xs:text-3xl font-extrabold text-on-primary leading-tight mt-1 drop-shadow-sm">
